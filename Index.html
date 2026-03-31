@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProjectGB — 三好爽太 ゲームポートフォリオ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── BACKGROUND ── -->
+  <div class="bg-pancakes">
+    <div class="pancake p1"></div>
+    <div class="pancake p2"></div>
+    <div class="pancake p3"></div>
+    <div class="pancake p4"></div>
+    <div class="pancake p5"></div>
+    <div class="pancake p6"></div>
+    <div class="honey-line hl1"></div>
+    <div class="honey-line hl2"></div>
+    <div class="honey-line hl3"></div>
+  </div>
+
+  <!-- ── CAT ── -->
+  <div class="cat-wrap">
+    <svg class="cat-svg" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="80" cy="72" rx="62" ry="22" fill="#f5c87a"/>
+      <ellipse cx="80" cy="70" rx="58" ry="19" fill="#f7d38a"/>
+      <ellipse cx="28" cy="82" rx="20" ry="8" fill="#f5c87a" transform="rotate(-8 28 82)"/>
+      <ellipse cx="132" cy="82" rx="20" ry="8" fill="#f5c87a" transform="rotate(8 132 82)"/>
+      <line x1="18" y1="86" x2="18" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="26" y1="88" x2="26" y2="92" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="34" y1="86" x2="34" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="126" y1="86" x2="126" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="134" y1="88" x2="134" y2="92" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="142" y1="86" x2="142" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
+      <ellipse cx="110" cy="52" rx="28" ry="26" fill="#f7d38a"/>
+      <polygon points="88,32 82,14 98,28" fill="#f5c87a"/>
+      <polygon points="90,34 85,18 98,30" fill="#f5ab70"/>
+      <polygon points="128,30 134,12 122,28" fill="#f5c87a"/>
+      <polygon points="126,32 131,16 122,30" fill="#f5ab70"/>
+      <path d="M100 50 Q104 46 108 50" stroke="#5a3008" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M116 50 Q120 46 124 50" stroke="#5a3008" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M106 60 Q110 68 118 60" stroke="#c05030" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <ellipse cx="112" cy="63" rx="7" ry="5" fill="#e07060" opacity="0.7"/>
+      <path d="M109 63 Q112 66 115 63" fill="#d04040"/>
+      <ellipse cx="112" cy="57" rx="3" ry="2" fill="#e07060"/>
+      <line x1="84" y1="56" x2="104" y2="58" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+      <line x1="84" y1="60" x2="104" y2="60" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+      <line x1="120" y1="58" x2="140" y2="56" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+      <line x1="120" y1="60" x2="140" y2="60" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+      <path d="M18 70 Q4 60 8 44 Q12 30 22 36" stroke="#f5c87a" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <path d="M18 70 Q4 60 8 44 Q12 30 22 36" stroke="#f0bd6a" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M60 62 Q70 58 80 62" stroke="#e0a840" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+      <path d="M65 70 Q75 66 85 70" stroke="#e0a840" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <div class="portfolio-page">
+
+    <!-- 目次 -->
+    <nav class="toc-sticky">
+      <div class="toc-label">✦ 目次</div>
+      <a class="toc-item" href="#s1"><span class="toc-num">1.</span><span class="toc-text">自己紹介</span></a>
+      <a class="toc-item" href="#s2"><span class="toc-num">2.</span><span class="toc-text">作品概要</span></a>
+      <a class="toc-item" href="#s3"><span class="toc-num">3.</span><span class="toc-text">ゲーム紹介</span></a>
+      <a class="toc-item" href="#s4"><span class="toc-num">4.</span><span class="toc-text">担当コード</span></a>
+      <a class="toc-item" href="#s5"><span class="toc-num">5.</span><span class="toc-text">技術紹介</span></a>
+      <a class="toc-item" href="#s6"><span class="toc-num">6.</span><span class="toc-text">今後の実装予定</span></a>
+    </nav>
+
+    <!-- ペーパー -->
+    <div class="paper">
+      <div class="tape"></div>
+      <div class="fold"></div>
+
+      <!-- カバー -->
+      <div class="section-cover">
+        <div class="cover-eyebrow">✦ game portfolio ✦</div>
+        <div class="cover-title">がぶっとバスター</div>
+        <div class="cover-sub">河原電子ビジネス専門学校 ゲームクリエイター科　三好 爽太</div>
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
+          <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML">
+          <img src="https://img.shields.io/badge/DirectX_12-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="DirectX12">
+          <img src="https://img.shields.io/badge/K2Engine-%E5%AD%A6%E5%86%85%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3-F5A623?style=flat-square" alt="K2Engine">
+          <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+        </div>
+      </div>
+
+      <!-- ── 1. 自己紹介 ── -->
+      <div class="section" id="s1">
+        <div class="sec-heading">
+          <span class="sec-num">01</span>
+          <span class="sec-title">自己紹介</span>
+        </div>
+        <table class="profile-table">
+          <tr>
+            <th>名前</th>
+            <td>三好 爽太（みよし そうた）</td>
+          </tr>
+          <tr>
+            <th>学校</th>
+            <td>河原電子ビジネス専門学校　ゲームクリエイター科</td>
+          </tr>
+          <tr>
+            <th>メール</th>
+            <td><a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- ── 2. 作品概要 ── -->
+      <div class="section" id="s2">
+        <div class="sec-heading">
+          <span class="sec-num">02</span>
+          <span class="sec-title">作品概要</span>
+        </div>
+        <table class="profile-table">
+          <tr><th>タイトル</th><td>がぶっとバスター</td></tr>
+          <tr><th>ジャンル</th><td>3D アクションゲーム</td></tr>
+          <tr><th>制作人数</th><td>3人</td></tr>
+          <tr><th>制作期間</th><td>2026年3月 〜 現在</td></tr>
+          <tr><th>プレイ人数</th><td>1人</td></tr>
+          <tr><th>対応ハード</th><td>PC（Windows 11）</td></tr>
+          <tr><th>コントローラー</th><td>Xbox 360 コントローラー</td></tr>
+        </table>
+
+        <div class="sub-heading">🔗 リンク</div>
+        <table class="profile-table">
+          <tr>
+            <th>GitHub</th>
+            <td><a href="https://github.com/miyosisouta/ProjectGB.git" target="_blank">miyosisouta/ProjectGB</a></td>
+          </tr>
+          <tr>
+            <th>YouTube</th>
+            <td>（動画投稿後に追記予定）</td>
+          </tr>
+        </table>
+
+        <div class="sub-heading">🛠️ 使用ツール</div>
+        <table class="profile-table">
+          <tr><th>エンジン</th><td>学内エンジン（K2Engine）</td></tr>
+          <tr><th>エディタ</th><td>Visual Studio 2022</td></tr>
+          <tr><th>使用言語</th><td>C++, HTML</td></tr>
+          <tr><th>3D モデル</th><td>3ds Max 2025</td></tr>
+          <tr><th>エフェクト</th><td>Effekseer</td></tr>
+          <tr><th>画像編集</th><td>Adobe Photoshop</td></tr>
+          <tr><th>バージョン管理</th><td>GitHub, Fork</td></tr>
+        </table>
+      </div>
+
+      <!-- ── 3. ゲーム紹介 ── -->
+      <div class="section" id="s3">
+        <div class="sec-heading">
+          <span class="sec-num">03</span>
+          <span class="sec-title">ゲーム紹介</span>
+        </div>
+
+        <!-- ボス登場 -->
+        <div class="game-sub">🐲 ボス登場シーン</div>
+        <div class="note-box">このボスを倒すことがゲームの目標です。</div>
+        <img class="game-gif" src="movie\BossAppearance.gif" width="450" alt="ボス登場シーン">
+
+        <!-- プレイヤーアクション -->
+        <div class="game-sub">🕹️ プレイヤーアクション</div>
+
+        <p style="font-size:13px;color:#7a5a30;margin-bottom:8px;font-weight:700;">通常攻撃</p>
+        <img class="game-gif" src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
+
+        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">特殊攻撃</p>
+        <img class="game-gif" src="movie\PlayerSpecialAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
+
+        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">回避</p>
+        <div class="note-box">ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。</div>
+        <div class="avoid-grid">
+          <div>
+            <img src="movie\PlayerAvoidFailure.gif" alt="回避失敗">
+            <div class="avoid-label">ダメージあり</div>
+          </div>
+          <div>
+            <img src="movie\PlayerAvoidSuccess.gif" alt="回避成功">
+            <div class="avoid-label">回避成功</div>
+          </div>
+        </div>
+
+        <!-- ボス攻撃パターン -->
+        <div class="game-sub">👾 ボスの攻撃パターン</div>
+
+        <p style="font-size:13px;color:#7a5a30;margin-bottom:8px;font-weight:700;">通常攻撃</p>
+        <img class="game-gif" src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
+
+        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">回転攻撃</p>
+        <img class="game-gif" src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
+
+        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">ヒットスタンプ</p>
+        <img class="game-gif" src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
+
+        <!-- ポーズ画面 -->
+        <div class="game-sub">⏸️ ポーズ画面</div>
+        <img class="game-gif" src="movie\PauseScreen.gif" width="450" alt="ポーズ画面">
+
+        <!-- ゲームクリア・オーバー -->
+        <div class="game-sub">🏆 ゲームクリア・ゲームオーバー</div>
+        <div class="avoid-grid">
+          <div>
+            <div class="avoid-label">ゲームクリア</div>
+            <img class="game-gif" src="movie\GameClear.gif" width="450" alt="ゲームクリア">
+          </div>
+          <div>
+            <div class="avoid-label">ゲームオーバー</div>
+            <img class="game-gif" src="movie\GameOver.gif" width="450" alt="ゲームオーバー">
+          </div>
+        </div>
+
+        <!-- 音量設定 -->
+        <div class="game-sub">🔊 音量設定</div>
+        <img class="game-gif" src="movie\SoundSetting.gif" width="450" alt="音量設定">
+      </div>
+
+      <!-- ── 4. 担当コード ── -->
+      <div class="section" id="s4">
+        <div class="sec-heading">
+          <span class="sec-num">04</span>
+          <span class="sec-title">担当コード</span>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">👤 プレイヤー</div>
+          <div class="code-tags">
+            <span class="code-tag">Player</span>
+            <span class="code-tag">PlayerState</span>
+            <span class="code-tag">PlayerController</span>
+          </div>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">👾 ボス</div>
+          <div class="code-tags">
+            <span class="code-tag">BossCharacter</span>
+            <span class="code-tag">BossState</span>
+            <span class="code-tag">BossSpawner</span>
+            <span class="code-tag">NPCController</span>
+          </div>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">🏗️ 基底・共通</div>
+          <div class="code-tags">
+            <span class="code-tag">Actor</span>
+            <span class="code-tag">Character</span>
+            <span class="code-tag">ActorStatus</span>
+            <span class="code-tag">IState</span>
+            <span class="code-tag">StateMachine</span>
+            <span class="code-tag">CharacterDataBase</span>
+          </div>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">⚔️ スキル</div>
+          <div class="code-tags">
+            <span class="code-tag">ISkill</span>
+            <span class="code-tag">NormalAttack</span>
+            <span class="code-tag">AbilityBase</span>
+            <span class="code-tag">DefaultAttack</span>
+            <span class="code-tag">Utility</span>
+          </div>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">💥 当たり判定</div>
+          <div class="code-tags">
+            <span class="code-tag">GhostBody</span>
+            <span class="code-tag">GhostBodyManager</span>
+            <span class="code-tag">GhostPrimitive</span>
+            <span class="code-tag">BroadphaseInterface</span>
+            <span class="code-tag">BroadphaseImpl</span>
+            <span class="code-tag">CollisionHitManager</span>
+            <span class="code-tag">BoundingVolume</span>
+            <span class="code-tag">PhysicalBody</span>
+          </div>
+        </div>
+
+        <div class="code-group">
+          <div class="code-group-title">🎥 カメラ</div>
+          <div class="code-tags">
+            <span class="code-tag">CameraCommon</span>
+            <span class="code-tag">CameraController</span>
+            <span class="code-tag">CameraManager</span>
+            <span class="code-tag">CameraSteering</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 5. 技術紹介 ── -->
+      <div class="section" id="s5">
+        <div class="sec-heading">
+          <span class="sec-num">05</span>
+          <span class="sec-title">技術紹介</span>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">1</span>階層型クラス設計</div>
+          <div class="tech-desc">新キャラは継承するだけ</div>
+          <img class="tech-img" src="sprite/ClassDesign.png" alt="クラス設計">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">2</span>ステートマシン</div>
+          <div class="tech-desc">グローバル遷移で死亡を最優先</div>
+          <img class="tech-img" src="sprite/StateMachine.png" alt="ステートマシン">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">3</span>攻撃タイムライン</div>
+          <div class="tech-desc">タイミングを秒数で一括管理</div>
+          <img class="tech-img" src="sprite/TaskScheduler.png" alt="攻撃タイムライン">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">4</span>無敵フラグ管理</div>
+          <div class="tech-desc">複数の無敵要因を同時管理</div>
+          <img class="tech-img" src="sprite/InvincibleFlag.png" alt="無敵フラグ管理">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">5</span>重み付き抽選AI</div>
+          <div class="tech-desc">距離で行動パターンが変化</div>
+          <img class="tech-img" src="sprite/WeightedLottery.png" alt="重み付き抽選AI">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">6</span>当たり判定パイプライン</div>
+          <div class="tech-desc">3段階で判定コストを最小化</div>
+          <img class="tech-img" src="sprite/CollisionDetectionPipeline.png" alt="当たり判定パイプライン">
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-title"><span class="tech-num-badge">7</span>カメラブレンドシステム</div>
+          <div class="tech-desc">時間指定でなめらかに遷移</div>
+          <img class="tech-img" src="sprite/CameraBlend.png" alt="カメラブレンドシステム">
+        </div>
+      </div>
+
+      <!-- ── 6. 今後の実装予定 ── -->
+      <div class="section" id="s6">
+        <div class="sec-heading">
+          <span class="sec-num">06</span>
+          <span class="sec-title">今後の実装予定</span>
+        </div>
+        <div class="future-list">
+          <div class="future-item">
+            <div class="future-check"></div>
+            <div class="future-label">プレイヤーのスキルを2つ追加</div>
+          </div>
+          <div class="future-item">
+            <div class="future-check"></div>
+            <div class="future-label">ボスを2種類追加、攻撃パターンをボス1体につき4種類作成</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="paper-footer">
+        <a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</a>
+      </div>
+
+    </div><!-- /.paper -->
+  </div><!-- /.portfolio-page -->
+
+</body>
+</html>
