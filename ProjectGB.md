@@ -1,87 +1,57 @@
-<div align="center">
+<link href="style.css" rel="stylesheet" />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=e8c56a,d4872a&height=140&section=header&text=🎮%20ProjectGB&fontSize=36&fontColor=3a2808&fontAlignY=55&animation=fadeIn" width="100%"/>
-
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
-![DirectX12](https://img.shields.io/badge/DirectX_12-0078D4?style=flat-square&logo=microsoft&logoColor=white)
-![K2Engine](https://img.shields.io/badge/K2Engine-%E5%AD%A6%E5%86%85%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3-F5A623?style=flat-square)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-
-</div>
+<img src="sprite\title.png" width="600" alt="タイトル画像">
 
 ---
 
-## 📋 目次
+<br>
+
+## 目次
 
 | No. | セクション |
 |:---:|---|
-| 1 | [👤 自己紹介](#1-自己紹介) |
-| 2 | [📄 作品概要](#2-作品概要) |
-| 3 | [🎮 ゲーム紹介](#3-ゲーム紹介) |
-| 4 | [💻 担当コード](#4-担当コード) |
-| 5 | [⚙️ 技術紹介](#5-技術紹介) |
-| 6 | [🔧 今後の実装予定](#6-今後の実装予定) |
+| 1 | [自己紹介](#1-自己紹介) |
+| 2 | [作品概要](#2-作品概要) |
+| 3 | [ゲーム紹介](#3-ゲーム紹介) |
+| 4 | [担当コード](#4-担当コード) |
+| 5 | [技術紹介](#5-技術紹介) |
+| 6 | [今後の実装予定](#6-今後の実装予定) |
 
----
+<br>
 
 ## 1. 自己紹介
 
-<table>
-  <tr>
-    <td width="120px" align="center"><b>名前</b></td>
-    <td>三好 爽太（みよし そうた）</td>
-  </tr>
-  <tr>
-    <td align="center"><b>学校</b></td>
-    <td>河原電子ビジネス専門学校　ゲームクリエイター科</td>
-  </tr>
-  <tr>
-    <td align="center"><b>メール</b></td>
-    <td><a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</a></td>
-  </tr>
-</table>
 
----
+<u><span style="font-size: 20px;"><b>名前</b></span></u>  
+　　　　三好 爽太（みよし そうた）  
 
-## 2. 作品概要
+<u><span style="font-size: 20px;"><b>学校</b></span></u>  
+　　　　河原電子ビジネス専門学校　ゲームクリエイター科  
 
-<table>
-  <tr>
-    <td width="140px" align="center"><b>タイトル</b></td>
-    <td>がぶっとバスター</td>
-  </tr>
-  <tr>
-    <td align="center"><b>ジャンル</b></td>
-    <td>3D アクションゲーム</td>
-  </tr>
-  <tr>
-    <td align="center"><b>制作人数</b></td>
-    <td>3人</td>
-  </tr>
-  <tr>
-    <td align="center"><b>制作期間</b></td>
-    <td>2026年3月 〜 現在</td>
-  </tr>
-  <tr>
-    <td align="center"><b>プレイ人数</b></td>
-    <td>1人</td>
-  </tr>
-  <tr>
-    <td align="center"><b>対応ハード</b></td>
-    <td>PC（Windows 11）</td>
-  </tr>
-  <tr>
-    <td align="center"><b>コントローラー</b></td>
-    <td>Xbox 360 コントローラー</td>
-  </tr>
-</table>
+<u><span style="font-size: 20px;"><b>メール</b></span></u>   
+　　　　<a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp  
+
+<br>
+
+## 2. 作品概要  
+
+
+### 📝 基本情報 
+| 項目 | 内容 |
+| :--- | :--- |
+| **タイトル** | がぶっとバスター |
+| **ジャンル** | 3D アクションゲーム |
+| **制作人数** | 3人 |
+| **制作期間** | 2026年3月 〜 現在 |
+| **プレイ人数**| 1人 |
+| **対応ハード**| PC（Windows 11） |
+| **コントローラー** | Xbox 360 コントローラー |
 
 <br>
 
 ### 🔗 リンク
 
-| | |
+|　項目　| リンク |
 |---|---|
 | **GitHub** | [miyosisouta/ProjectGB](https://github.com/miyosisouta/ProjectGB.git) |
 | **YouTube** | （動画投稿後に追記予定） |
@@ -92,35 +62,63 @@
 
 | カテゴリ | ツール |
 |---|---|
-| エンジン | 学内エンジン（K2Engine） |
-| エディタ | Visual Studio 2022 |
-| 使用言語 | C++, HTML |
-| 3D モデル | 3ds Max 2025 |
-| エフェクト | Effekseer |
-| 画像編集 | Adobe Photoshop |
-| バージョン管理 | GitHub, Fork |
+| **エンジン** | 学内エンジン（K2Engine） |
+| **エディタ** | Visual Studio 2022 |
+| **使用言語** | C++, HTML |
+| **3D モデル** | 3ds Max 2025 |
+| **エフェクト** | Effekseer |
+| **画像編集** | Adobe Photoshop |
+| **バージョン管理** | GitHub, Fork |
 
----
+<br>
+
 
 ## 3. ゲーム紹介
 
-### 🐲 ボス登場シーン
+### 🦍 ボス登場シーン
 
-> このボスを倒すことがゲームの目標です。
+> アウトゲームにて挑戦するボスを選択できます。  
+> 選択したボスを倒すことがゲームの目標です。
 
-<img src="movie\BossAppearance.gif" width="450" alt="ボス登場シーン">
+| ゴリラ |
+|:---:|
+<img src="movie\BossAppearance.gif" width="300" alt="ボス1登場シーン"> 
 
 ---
 
 ### 🕹️ プレイヤーアクション
 
-#### 通常攻撃
+<br>
+<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>  
+<br>
+
+#### 噛みつき
 
 <img src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
 
-#### 特殊攻撃
 
-<img src="movie\PlayerSpecialAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
+---
+<br>
+<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>  
+<br>
+
+#### デフォルト攻撃
+
+<img src="movie\PlayerDefaultAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
+
+#### 地雷
+
+<img src="movie\PlayerLandMine.gif" width="450" alt="プレイヤーの地雷">
+
+#### 火魔法
+
+<img src="movie\PlayerFireMagic.gif" width="450" alt="プレイヤーの火魔法">
+
+
+---
+<br>
+<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>  
+<br>
 
 #### 回避
 
@@ -130,7 +128,9 @@
 |:---:|:---:|
 <img src="movie\PlayerAvoidFailure.gif" width="300" alt="回避失敗"> | <img src="movie\PlayerAvoidSuccess.gif" width="300" alt="回避成功"> |
 
+
 ---
+<br>
 
 ### 👾 ボスの攻撃パターン
 
@@ -138,13 +138,22 @@
 
 <img src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
 
+
 #### 回転攻撃
 
 <img src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
 
+
 #### ヒットスタンプ
 
 <img src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
+
+
+#### レーザー攻撃
+
+| 通常 | 3連射 | チャージ |
+|:---:|:---:|:---:|
+<img src="movie\BossNormalLaser.gif" width="300" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="300" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="300" alt="レーザーチャージ"> |
 
 ---
 
@@ -152,12 +161,24 @@
 
 <img src="movie\SoundSetting.gif" width="450" alt="音量設定">
 
-<!-- 💡 提案: 音量設定はゲーム紹介というよりUI紹介に近い内容です。
-     「技術紹介」や独立した「UI紹介」セクションに移したほうが
-     ゲームの流れを見せるゲーム紹介セクションがスッキリするかもしれません。
-     現状はゲーム紹介の末尾に置いています。 -->
+<br>
 
 ---
+
+###  🎮 キーコンフィグ
+
+<img src="movie\SoundSetting.gif" width="450" alt="キー設定">
+
+<br>
+
+---
+
+### 📷 カメラ
+
+<img src="movie\SoundSetting.gif" width="450" alt="カメラ設定">
+
+<br>
+
 
 ## 4. 担当コード
 
@@ -168,10 +189,13 @@
 `BossCharacter` `BossState` `BossSpawner` `NPCController`
 
 ### 🏗️ 基底・共通
-`Actor` `Character` `ActorStatus` `IState` `StateMachine` `CharacterDataBase`
+`Actor` `Character` `ActorStatus` `IState` `StateMachine` `CharacterDataBase` `AttackObject` `AttackObjectManager`
+
+### 🎯 バトル
+`BattleManager` `Mission` `MissionCondition` `MissionEvent` `MissionManager` `MissionType`
 
 ### ⚔️ スキル
-`ISkill` `NormalAttack` `AbilityBase` `DefaultAttack` `Utility`
+`ISkill` `NormalAttack` `AbilityBase` `DefaultAttack` `Utility` `Bomb` `Magic`
 
 ### 💥 当たり判定
 `GhostBody` `GhostBodyManager` `GhostPrimitive` `BroadphaseInterface` `BroadphaseImpl` `CollisionHitManager` `BoundingVolume` `PhysicalBody`
@@ -179,27 +203,59 @@
 ### 🎥 カメラ
 `CameraCommon` `CameraController` `CameraManager` `CameraSteering`
 
----
+### 🏔️ ステージ
+`StageBase` `StageManager` `StaticObject`
+
+### 🌾 草システム
+`GrassBendManager` `GrassObject` `grass.fx` `RenderToBufferFor3DModel.fx` `DitherCBData`
+
+### 🧩 コアシステム
+`KeyConfig` `ParameterManager`
+
+### 🖥️ UI
+`UIManager`
+
+### 🐛 デバッグ
+`DebugGrassScene`
+
+<br>
+
 
 ## 5. 技術紹介
 
-### ⚙️ 1. 階層型クラス設計
+### 🌾 1. 草システム
+<img src="sprite\UnderPreparation.png" width="280" alt="準備中">  
 
-> 新キャラは継承するだけ
+### 🐛 2. デバッグシーン
+<img src="sprite\UnderPreparation.png" width="280" alt="準備中">
 
-<img src="sprite/ClassDesign.png" width="450" alt="クラス設計">
+
+### 🎯 3. ミッションシステム
+
+> ミッションの内部を他のクラスが知らなくていい設計にしました。  
+> 新しいミッションを追加するときも、既存のコードを一切触らずに完結します。
+
+<br>
+
+<u><span style="font-size: 20px;"><b>新ミッション追加手順</b></span></u>
+
+> 1. `MissionType.h` の `MissionID` に新しいIDを1行追加  
+> 2. `MissionManager` の `SetupBoss()` に `AddMission` を1行追加  
+> 3. `MissionCondition.h` に条件クラスを追加（条件が新しい場合のみ）
+
+<img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
 
 ---
 
-### ⚙️ 2. ステートマシン
+### ⚙️ 4. 当たり判定パイプライン
 
-> グローバル遷移で死亡を最優先
+> 3段階で判定コストを最小化
 
-<img src="sprite/StateMachine.png" width="450" alt="ステートマシーン">
+<img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
 
 ---
 
-### ⚙️ 3. 攻撃タイムライン
+### ⚙️ 5. 攻撃タイムライン
 
 > タイミングを秒数で一括管理
 
@@ -207,27 +263,11 @@
 
 ---
 
-### ⚙️ 4. 無敵フラグ管理
-
-> 複数の無敵要因を同時管理
-
-<img src="sprite/InvincibleFlag.png" width="450" alt="ステートマシーン">
-
----
-
-### ⚙️ 5. 重み付き抽選AI
+### ⚙️ 6. 重み付き抽選AI
 
 > 距離で行動パターンが変化
 
 <img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
-
----
-
-### ⚙️ 6. 当たり判定パイプライン
-
-> 3段階で判定コストを最小化
-
-<img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
 
 ---
 
@@ -237,7 +277,10 @@
 
 <img src="sprite/CameraBlend.png" width="450" alt="カメラ">
 
+
 ---
+
+<br>
 
 ## 6. 今後の実装予定
 
@@ -246,6 +289,4 @@
 
 ---
 
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=e8c56a,d4872a&height=80&section=footer" width="100%"/>
-</div>
+[目次へ戻る](#目次)

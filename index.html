@@ -1,373 +1,693 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProjectGB — 三好爽太 ゲームポートフォリオ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<title>ProjectGB.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
-
-  <!-- ── BACKGROUND ── -->
-  <div class="bg-pancakes">
-    <div class="pancake p1"></div>
-    <div class="pancake p2"></div>
-    <div class="pancake p3"></div>
-    <div class="pancake p4"></div>
-    <div class="pancake p5"></div>
-    <div class="pancake p6"></div>
-    <div class="honey-line hl1"></div>
-    <div class="honey-line hl2"></div>
-    <div class="honey-line hl3"></div>
-  </div>
-
-  <!-- ── CAT ── -->
-  <div class="cat-wrap">
-    <svg class="cat-svg" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="80" cy="72" rx="62" ry="22" fill="#f5c87a"/>
-      <ellipse cx="80" cy="70" rx="58" ry="19" fill="#f7d38a"/>
-      <ellipse cx="28" cy="82" rx="20" ry="8" fill="#f5c87a" transform="rotate(-8 28 82)"/>
-      <ellipse cx="132" cy="82" rx="20" ry="8" fill="#f5c87a" transform="rotate(8 132 82)"/>
-      <line x1="18" y1="86" x2="18" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="26" y1="88" x2="26" y2="92" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="34" y1="86" x2="34" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="126" y1="86" x2="126" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="134" y1="88" x2="134" y2="92" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <line x1="142" y1="86" x2="142" y2="90" stroke="#c8913a" stroke-width="1.5" stroke-linecap="round"/>
-      <ellipse cx="110" cy="52" rx="28" ry="26" fill="#f7d38a"/>
-      <polygon points="88,32 82,14 98,28" fill="#f5c87a"/>
-      <polygon points="90,34 85,18 98,30" fill="#f5ab70"/>
-      <polygon points="128,30 134,12 122,28" fill="#f5c87a"/>
-      <polygon points="126,32 131,16 122,30" fill="#f5ab70"/>
-      <path d="M100 50 Q104 46 108 50" stroke="#5a3008" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <path d="M116 50 Q120 46 124 50" stroke="#5a3008" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <path d="M106 60 Q110 68 118 60" stroke="#c05030" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <ellipse cx="112" cy="63" rx="7" ry="5" fill="#e07060" opacity="0.7"/>
-      <path d="M109 63 Q112 66 115 63" fill="#d04040"/>
-      <ellipse cx="112" cy="57" rx="3" ry="2" fill="#e07060"/>
-      <line x1="84" y1="56" x2="104" y2="58" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-      <line x1="84" y1="60" x2="104" y2="60" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-      <line x1="120" y1="58" x2="140" y2="56" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-      <line x1="120" y1="60" x2="140" y2="60" stroke="#a07030" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
-      <path d="M18 70 Q4 60 8 44 Q12 30 22 36" stroke="#f5c87a" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <path d="M18 70 Q4 60 8 44 Q12 30 22 36" stroke="#f0bd6a" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <path d="M60 62 Q70 58 80 62" stroke="#e0a840" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
-      <path d="M65 70 Q75 66 85 70" stroke="#e0a840" stroke-width="2" fill="none" opacity="0.4" stroke-linecap="round"/>
-    </svg>
-  </div>
-
-  <!-- ── MAIN ── -->
-  <div class="portfolio-page">
-
-    <!-- 目次 -->
-    <nav class="toc-sticky">
-      <div class="toc-label">✦ 目次</div>
-      <a class="toc-item" href="#s1"><span class="toc-num">1.</span><span class="toc-text">自己紹介</span></a>
-      <a class="toc-item" href="#s2"><span class="toc-num">2.</span><span class="toc-text">作品概要</span></a>
-      <a class="toc-item" href="#s3"><span class="toc-num">3.</span><span class="toc-text">ゲーム紹介</span></a>
-      <a class="toc-item" href="#s4"><span class="toc-num">4.</span><span class="toc-text">担当コード</span></a>
-      <a class="toc-item" href="#s5"><span class="toc-num">5.</span><span class="toc-text">技術紹介</span></a>
-      <a class="toc-item" href="#s6"><span class="toc-num">6.</span><span class="toc-text">今後の実装予定</span></a>
-    </nav>
-
-    <!-- ペーパー -->
-    <div class="paper">
-      <div class="tape"></div>
-      <div class="fold"></div>
-
-      <!-- カバー -->
-      <div class="section-cover">
-        <div class="cover-eyebrow">✦ game portfolio ✦</div>
-        <div class="cover-title">がぶっとバスター</div>
-        <div class="cover-sub">河原電子ビジネス専門学校 ゲームクリエイター科　三好 爽太</div>
-        <div class="badge-row">
-          <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
-          <img src="https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML">
-          <img src="https://img.shields.io/badge/DirectX_12-0078D4?style=flat-square&logo=microsoft&logoColor=white" alt="DirectX12">
-          <img src="https://img.shields.io/badge/K2Engine-%E5%AD%A6%E5%86%85%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3-F5A623?style=flat-square" alt="K2Engine">
-          <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-        </div>
-      </div>
-
-      <!-- ── 1. 自己紹介 ── -->
-      <div class="section" id="s1">
-        <div class="sec-heading">
-          <span class="sec-num">01</span>
-          <span class="sec-title">自己紹介</span>
-        </div>
-        <table class="profile-table">
-          <tr>
-            <th>名前</th>
-            <td>三好 爽太（みよし そうた）</td>
-          </tr>
-          <tr>
-            <th>学校</th>
-            <td>河原電子ビジネス専門学校　ゲームクリエイター科</td>
-          </tr>
-          <tr>
-            <th>メール</th>
-            <td><a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</a></td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- ── 2. 作品概要 ── -->
-      <div class="section" id="s2">
-        <div class="sec-heading">
-          <span class="sec-num">02</span>
-          <span class="sec-title">作品概要</span>
-        </div>
-        <table class="profile-table">
-          <tr><th>タイトル</th><td>がぶっとバスター</td></tr>
-          <tr><th>ジャンル</th><td>3D アクションゲーム</td></tr>
-          <tr><th>制作人数</th><td>3人</td></tr>
-          <tr><th>制作期間</th><td>2026年3月 〜 現在</td></tr>
-          <tr><th>プレイ人数</th><td>1人</td></tr>
-          <tr><th>対応ハード</th><td>PC（Windows 11）</td></tr>
-          <tr><th>コントローラー</th><td>Xbox 360 コントローラー</td></tr>
-        </table>
-
-        <div class="sub-heading">🔗 リンク</div>
-        <table class="profile-table">
-          <tr>
-            <th>GitHub</th>
-            <td><a href="https://github.com/miyosisouta/ProjectGB.git" target="_blank">miyosisouta/ProjectGB</a></td>
-          </tr>
-          <tr>
-            <th>YouTube</th>
-            <td>（動画投稿後に追記予定）</td>
-          </tr>
-        </table>
-
-        <div class="sub-heading">🛠️ 使用ツール</div>
-        <table class="profile-table">
-          <tr><th>エンジン</th><td>学内エンジン（K2Engine）</td></tr>
-          <tr><th>エディタ</th><td>Visual Studio 2022</td></tr>
-          <tr><th>使用言語</th><td>C++, HTML</td></tr>
-          <tr><th>3D モデル</th><td>3ds Max 2025</td></tr>
-          <tr><th>エフェクト</th><td>Effekseer</td></tr>
-          <tr><th>画像編集</th><td>Adobe Photoshop</td></tr>
-          <tr><th>バージョン管理</th><td>GitHub, Fork</td></tr>
-        </table>
-      </div>
-
-      <!-- ── 3. ゲーム紹介 ── -->
-      <div class="section" id="s3">
-        <div class="sec-heading">
-          <span class="sec-num">03</span>
-          <span class="sec-title">ゲーム紹介</span>
-        </div>
-
-        <!-- ボス登場 -->
-        <div class="game-sub">🐲 ボス登場シーン</div>
-        <div class="note-box">このボスを倒すことがゲームの目標です。</div>
-        <img class="game-gif" src="movie\BossAppearance.gif" width="450" alt="ボス登場シーン">
-
-        <!-- プレイヤーアクション -->
-        <div class="game-sub">🕹️ プレイヤーアクション</div>
-
-        <p style="font-size:13px;color:#7a5a30;margin-bottom:8px;font-weight:700;">通常攻撃</p>
-        <img class="game-gif" src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
-
-        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">特殊攻撃</p>
-        <img class="game-gif" src="movie\PlayerSpecialAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
-
-        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">回避</p>
-        <div class="note-box">ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。</div>
-        <div class="avoid-grid">
-          <div>
-            <img src="movie\PlayerAvoidFailure.gif" alt="回避失敗">
-            <div class="avoid-label">ダメージあり</div>
-          </div>
-          <div>
-            <img src="movie\PlayerAvoidSuccess.gif" alt="回避成功">
-            <div class="avoid-label">回避成功</div>
-          </div>
-        </div>
-
-        <!-- ボス攻撃パターン -->
-        <div class="game-sub">👾 ボスの攻撃パターン</div>
-
-        <p style="font-size:13px;color:#7a5a30;margin-bottom:8px;font-weight:700;">通常攻撃</p>
-        <img class="game-gif" src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
-
-        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">回転攻撃</p>
-        <img class="game-gif" src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
-
-        <p style="font-size:13px;color:#7a5a30;margin:16px 0 8px;font-weight:700;">ヒットスタンプ</p>
-        <img class="game-gif" src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
-
-        <!-- ポーズ画面 -->
-        <div class="game-sub">⏸️ ポーズ画面</div>
-        <img class="game-gif" src="movie\PauseScreen.gif" width="450" alt="ポーズ画面">
-
-        <!-- ゲームクリア・オーバー -->
-        <div class="game-sub">🏆 ゲームクリア・ゲームオーバー</div>
-        <div class="avoid-grid">
-          <div>
-            <div class="avoid-label">ゲームクリア</div>
-            <img class="game-gif" src="movie\GameClear.gif" width="450" alt="ゲームクリア">
-          </div>
-          <div>
-            <div class="avoid-label">ゲームオーバー</div>
-            <img class="game-gif" src="movie\GameOver.gif" width="450" alt="ゲームオーバー">
-          </div>
-        </div>
-
-        <!-- 音量設定 -->
-        <div class="game-sub">🔊 音量設定</div>
-        <img class="game-gif" src="movie\SoundSetting.gif" width="450" alt="音量設定">
-      </div>
-
-      <!-- ── 4. 担当コード ── -->
-      <div class="section" id="s4">
-        <div class="sec-heading">
-          <span class="sec-num">04</span>
-          <span class="sec-title">担当コード</span>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">👤 プレイヤー</div>
-          <div class="code-tags">
-            <span class="code-tag">Player</span>
-            <span class="code-tag">PlayerState</span>
-            <span class="code-tag">PlayerController</span>
-          </div>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">👾 ボス</div>
-          <div class="code-tags">
-            <span class="code-tag">BossCharacter</span>
-            <span class="code-tag">BossState</span>
-            <span class="code-tag">BossSpawner</span>
-            <span class="code-tag">NPCController</span>
-          </div>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">🏗️ 基底・共通</div>
-          <div class="code-tags">
-            <span class="code-tag">Actor</span>
-            <span class="code-tag">Character</span>
-            <span class="code-tag">ActorStatus</span>
-            <span class="code-tag">IState</span>
-            <span class="code-tag">StateMachine</span>
-            <span class="code-tag">CharacterDataBase</span>
-          </div>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">⚔️ スキル</div>
-          <div class="code-tags">
-            <span class="code-tag">ISkill</span>
-            <span class="code-tag">NormalAttack</span>
-            <span class="code-tag">AbilityBase</span>
-            <span class="code-tag">DefaultAttack</span>
-            <span class="code-tag">Utility</span>
-          </div>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">💥 当たり判定</div>
-          <div class="code-tags">
-            <span class="code-tag">GhostBody</span>
-            <span class="code-tag">GhostBodyManager</span>
-            <span class="code-tag">GhostPrimitive</span>
-            <span class="code-tag">BroadphaseInterface</span>
-            <span class="code-tag">BroadphaseImpl</span>
-            <span class="code-tag">CollisionHitManager</span>
-            <span class="code-tag">BoundingVolume</span>
-            <span class="code-tag">PhysicalBody</span>
-          </div>
-        </div>
-
-        <div class="code-group">
-          <div class="code-group-title">🎥 カメラ</div>
-          <div class="code-tags">
-            <span class="code-tag">CameraCommon</span>
-            <span class="code-tag">CameraController</span>
-            <span class="code-tag">CameraManager</span>
-            <span class="code-tag">CameraSteering</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ── 5. 技術紹介 ── -->
-      <div class="section" id="s5">
-        <div class="sec-heading">
-          <span class="sec-num">05</span>
-          <span class="sec-title">技術紹介</span>
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">1</span>階層型クラス設計</div>
-          <div class="tech-desc">新キャラは継承するだけ</div>
-          <img class="tech-img" src="sprite/ClassDesign.png" alt="クラス設計">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">2</span>ステートマシン</div>
-          <div class="tech-desc">グローバル遷移で死亡を最優先</div>
-          <img class="tech-img" src="sprite/StateMachine.png" alt="ステートマシン">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">3</span>攻撃タイムライン</div>
-          <div class="tech-desc">タイミングを秒数で一括管理</div>
-          <img class="tech-img" src="sprite/TaskScheduler.png" alt="攻撃タイムライン">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">4</span>無敵フラグ管理</div>
-          <div class="tech-desc">複数の無敵要因を同時管理</div>
-          <img class="tech-img" src="sprite/InvincibleFlag.png" alt="無敵フラグ管理">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">5</span>重み付き抽選AI</div>
-          <div class="tech-desc">距離で行動パターンが変化</div>
-          <img class="tech-img" src="sprite/WeightedLottery.png" alt="重み付き抽選AI">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">6</span>当たり判定パイプライン</div>
-          <div class="tech-desc">3段階で判定コストを最小化</div>
-          <img class="tech-img" src="sprite/CollisionDetectionPipeline.png" alt="当たり判定パイプライン">
-        </div>
-
-        <div class="tech-item">
-          <div class="tech-title"><span class="tech-num-badge">7</span>カメラブレンドシステム</div>
-          <div class="tech-desc">時間指定でなめらかに遷移</div>
-          <img class="tech-img" src="sprite/CameraBlend.png" alt="カメラブレンドシステム">
-        </div>
-      </div>
-
-      <!-- ── 6. 今後の実装予定 ── -->
-      <div class="section" id="s6">
-        <div class="sec-heading">
-          <span class="sec-num">06</span>
-          <span class="sec-title">今後の実装予定</span>
-        </div>
-        <div class="future-list">
-          <div class="future-item">
-            <div class="future-check"></div>
-            <div class="future-label">プレイヤーのスキルを2つ追加</div>
-          </div>
-          <div class="future-item">
-            <div class="future-check"></div>
-            <div class="future-label">ボスを2種類追加、攻撃パターンをボス1体につき4種類作成</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="paper-footer">
-        <a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</a>
-      </div>
-
-    </div><!-- /.paper -->
-  </div><!-- /.portfolio-page -->
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<link href="style.css" rel="stylesheet" />
+<img src="sprite\title.png" width="600" alt="タイトル画像">
+<hr>
+<br>
+<h2 id="目次">目次</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">No.</th>
+<th>セクション</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td><a href="#1-%E8%87%AA%E5%B7%B1%E7%B4%B9%E4%BB%8B">自己紹介</a></td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td><a href="#2-%E4%BD%9C%E5%93%81%E6%A6%82%E8%A6%81">作品概要</a></td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td><a href="#3-%E3%82%B2%E3%83%BC%E3%83%A0%E7%B4%B9%E4%BB%8B">ゲーム紹介</a></td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td><a href="#4-%E6%8B%85%E5%BD%93%E3%82%B3%E3%83%BC%E3%83%89">担当コード</a></td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td><a href="#5-%E6%8A%80%E8%A1%93%E7%B4%B9%E4%BB%8B">技術紹介</a></td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td><a href="#6-%E4%BB%8A%E5%BE%8C%E3%81%AE%E5%AE%9F%E8%A3%85%E4%BA%88%E5%AE%9A">今後の実装予定</a></td>
+</tr>
+</tbody>
+</table>
+<br>
+<h2 id="1-自己紹介">1. 自己紹介</h2>
+<p><u><span style="font-size: 20px;"><b>名前</b></span></u><br>
+　　　　三好 爽太（みよし そうた）</p>
+<p><u><span style="font-size: 20px;"><b>学校</b></span></u><br>
+　　　　河原電子ビジネス専門学校　ゲームクリエイター科</p>
+<p><u><span style="font-size: 20px;"><b>メール</b></span></u><br>
+　　　　<a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp</p>
+<br>
+<h2 id="2-作品概要">2. 作品概要</h2>
+<h3 id="-基本情報">📝 基本情報</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">項目</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>タイトル</strong></td>
+<td style="text-align:left">がぶっとバスター</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ジャンル</strong></td>
+<td style="text-align:left">3D アクションゲーム</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>制作人数</strong></td>
+<td style="text-align:left">3人</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>制作期間</strong></td>
+<td style="text-align:left">2026年3月 〜 現在</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>プレイ人数</strong></td>
+<td style="text-align:left">1人</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>対応ハード</strong></td>
+<td style="text-align:left">PC（Windows 11）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>コントローラー</strong></td>
+<td style="text-align:left">Xbox 360 コントローラー</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="-リンク">🔗 リンク</h3>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>リンク</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong></td>
+<td><a href="https://github.com/miyosisouta/ProjectGB.git">miyosisouta/ProjectGB</a></td>
+</tr>
+<tr>
+<td><strong>YouTube</strong></td>
+<td>（動画投稿後に追記予定）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="️-使用ツール">🛠️ 使用ツール</h3>
+<table>
+<thead>
+<tr>
+<th>カテゴリ</th>
+<th>ツール</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>エンジン</strong></td>
+<td>学内エンジン（K2Engine）</td>
+</tr>
+<tr>
+<td><strong>エディタ</strong></td>
+<td>Visual Studio 2022</td>
+</tr>
+<tr>
+<td><strong>使用言語</strong></td>
+<td>C++, HTML</td>
+</tr>
+<tr>
+<td><strong>3D モデル</strong></td>
+<td>3ds Max 2025</td>
+</tr>
+<tr>
+<td><strong>エフェクト</strong></td>
+<td>Effekseer</td>
+</tr>
+<tr>
+<td><strong>画像編集</strong></td>
+<td>Adobe Photoshop</td>
+</tr>
+<tr>
+<td><strong>バージョン管理</strong></td>
+<td>GitHub, Fork</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h2 id="3-ゲーム紹介">3. ゲーム紹介</h2>
+<h3 id="-ボス登場シーン">🦍 ボス登場シーン</h3>
+<blockquote>
+<p>アウトゲームにて挑戦するボスを選択できます。<br>
+選択したボスを倒すことがゲームの目標です。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ゴリラ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\BossAppearance.gif" width="300" alt="ボス1登場シーン"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="️-プレイヤーアクション">🕹️ プレイヤーアクション</h3>
+<br>
+<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>  
+<br>
+<h4 id="噛みつき">噛みつき</h4>
+<img src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
+<hr>
+<br>
+<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>  
+<br>
+<h4 id="デフォルト攻撃">デフォルト攻撃</h4>
+<img src="movie\PlayerDefaultAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
+<h4 id="地雷">地雷</h4>
+<img src="movie\PlayerLandMine.gif" width="450" alt="プレイヤーの地雷">
+<h4 id="火魔法">火魔法</h4>
+<img src="movie\PlayerFireMagic.gif" width="450" alt="プレイヤーの火魔法">
+<hr>
+<br>
+<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>  
+<br>
+<h4 id="回避">回避</h4>
+<blockquote>
+<p>ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ダメージあり</th>
+<th style="text-align:center">回避成功</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\PlayerAvoidFailure.gif" width="300" alt="回避失敗"></td>
+<td style="text-align:center"><img src="movie\PlayerAvoidSuccess.gif" width="300" alt="回避成功"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<br>
+<h3 id="-ボスの攻撃パターン">👾 ボスの攻撃パターン</h3>
+<h4 id="通常攻撃">通常攻撃</h4>
+<img src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
+<h4 id="回転攻撃">回転攻撃</h4>
+<img src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
+<h4 id="ヒットスタンプ">ヒットスタンプ</h4>
+<img src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
+<h4 id="レーザー攻撃">レーザー攻撃</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">通常</th>
+<th style="text-align:center">3連射</th>
+<th style="text-align:center">チャージ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\BossNormalLaser.gif" width="300" alt="レーザー通常"></td>
+<td style="text-align:center"><img src="movie\BossMultLaser.gif" width="300" alt="レーザー3連射"></td>
+<td style="text-align:center"><img src="movie\BossChargeLaser.gif" width="300" alt="レーザーチャージ"></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="-音量設定">🔊 音量設定</h3>
+<img src="movie\SoundSetting.gif" width="450" alt="音量設定">
+<br>
+<hr>
+<h3 id="-キーコンフィグ">🎮 キーコンフィグ</h3>
+<img src="movie\SoundSetting.gif" width="450" alt="キー設定">
+<br>
+<hr>
+<h3 id="-カメラ">📷 カメラ</h3>
+<img src="movie\SoundSetting.gif" width="450" alt="カメラ設定">
+<br>
+<h2 id="4-担当コード">4. 担当コード</h2>
+<h3 id="-プレイヤー">👤 プレイヤー</h3>
+<p><code>Player</code> <code>PlayerState</code> <code>PlayerController</code></p>
+<h3 id="-ボス">👾 ボス</h3>
+<p><code>BossCharacter</code> <code>BossState</code> <code>BossSpawner</code> <code>NPCController</code></p>
+<h3 id="️-基底共通">🏗️ 基底・共通</h3>
+<p><code>Actor</code> <code>Character</code> <code>ActorStatus</code> <code>IState</code> <code>StateMachine</code> <code>CharacterDataBase</code> <code>AttackObject</code> <code>AttackObjectManager</code></p>
+<h3 id="-バトル">🎯 バトル</h3>
+<p><code>BattleManager</code> <code>Mission</code> <code>MissionCondition</code> <code>MissionEvent</code> <code>MissionManager</code> <code>MissionType</code></p>
+<h3 id="️-スキル">⚔️ スキル</h3>
+<p><code>ISkill</code> <code>NormalAttack</code> <code>AbilityBase</code> <code>DefaultAttack</code> <code>Utility</code> <code>Bomb</code> <code>Magic</code></p>
+<h3 id="-当たり判定">💥 当たり判定</h3>
+<p><code>GhostBody</code> <code>GhostBodyManager</code> <code>GhostPrimitive</code> <code>BroadphaseInterface</code> <code>BroadphaseImpl</code> <code>CollisionHitManager</code> <code>BoundingVolume</code> <code>PhysicalBody</code></p>
+<h3 id="-カメラ-1">🎥 カメラ</h3>
+<p><code>CameraCommon</code> <code>CameraController</code> <code>CameraManager</code> <code>CameraSteering</code></p>
+<h3 id="️-ステージ">🏔️ ステージ</h3>
+<p><code>StageBase</code> <code>StageManager</code> <code>StaticObject</code></p>
+<h3 id="-草システム">🌾 草システム</h3>
+<p><code>GrassBendManager</code> <code>GrassObject</code> <code>grass.fx</code> <code>RenderToBufferFor3DModel.fx</code> <code>DitherCBData</code></p>
+<h3 id="-コアシステム">🧩 コアシステム</h3>
+<p><code>KeyConfig</code> <code>ParameterManager</code></p>
+<h3 id="️-ui">🖥️ UI</h3>
+<p><code>UIManager</code></p>
+<h3 id="-デバッグ">🐛 デバッグ</h3>
+<p><code>DebugGrassScene</code></p>
+<br>
+<h2 id="5-技術紹介">5. 技術紹介</h2>
+<h3 id="-1-草システム">🌾 1. 草システム</h3>
+<img src="sprite\UnderPreparation.png" width="280" alt="準備中">  
+<h3 id="-2-デバッグシーン">🐛 2. デバッグシーン</h3>
+<img src="sprite\UnderPreparation.png" width="280" alt="準備中">
+<h3 id="-3-ミッションシステム">🎯 3. ミッションシステム</h3>
+<blockquote>
+<p>ミッションの内部を他のクラスが知らなくていい設計にしました。<br>
+新しいミッションを追加するときも、既存のコードを一切触らずに完結します。</p>
+</blockquote>
+<br>
+<p><u><span style="font-size: 20px;"><b>新ミッション追加手順</b></span></u></p>
+<blockquote>
+<ol>
+<li><code>MissionType.h</code> の <code>MissionID</code> に新しいIDを1行追加</li>
+<li><code>MissionManager</code> の <code>SetupBoss()</code> に <code>AddMission</code> を1行追加</li>
+<li><code>MissionCondition.h</code> に条件クラスを追加（条件が新しい場合のみ）</li>
+</ol>
+</blockquote>
+<img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
+<hr>
+<h3 id="️-4-当たり判定パイプライン">⚙️ 4. 当たり判定パイプライン</h3>
+<blockquote>
+<p>3段階で判定コストを最小化</p>
+</blockquote>
+<img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
+<hr>
+<h3 id="️-5-攻撃タイムライン">⚙️ 5. 攻撃タイムライン</h3>
+<blockquote>
+<p>タイミングを秒数で一括管理</p>
+</blockquote>
+<img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
+<hr>
+<h3 id="️-6-重み付き抽選ai">⚙️ 6. 重み付き抽選AI</h3>
+<blockquote>
+<p>距離で行動パターンが変化</p>
+</blockquote>
+<img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
+<hr>
+<h3 id="️-7-カメラブレンドシステム">⚙️ 7. カメラブレンドシステム</h3>
+<blockquote>
+<p>時間指定でなめらかに遷移</p>
+</blockquote>
+<img src="sprite/CameraBlend.png" width="450" alt="カメラ">
+<hr>
+<br>
+<h2 id="6-今後の実装予定">6. 今後の実装予定</h2>
+<ul>
+<li>プレイヤーのスキルを2つ追加予定</li>
+<li>ボスを2種類追加、攻撃パターンをボス1体につき4種類作成</li>
+</ul>
+<hr>
+<p><a href="#%E7%9B%AE%E6%AC%A1">目次へ戻る</a></p>
 
 </body>
 </html>
