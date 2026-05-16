@@ -29,7 +29,7 @@
 　　　　河原電子ビジネス専門学校　ゲームクリエイター科  
 
 <u><span style="font-size: 20px;"><b>メール</b></span></u>   
-　　　　<a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp  
+　　　　<a href="mailto:CA01244028@st.kawahara.ac.jp">CA01244028@st.kawahara.ac.jp  </a>
 
 <br>
 
