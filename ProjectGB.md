@@ -224,11 +224,54 @@
 ## 5. 技術紹介
 
 ### 🌾 1. 草システム
-<img src="sprite\UnderPreparation.png" width="280" alt="準備中">  
 
-### 🐛 2. デバッグシーン
-<img src="sprite\UnderPreparation.png" width="280" alt="準備中">
+<br>
+<u><span style="font-size: 18px;"><b>頂点シェーダーによるプロシージャルアニメーション</b></span></u>  
+<br>
 
+<span style="display:block;margin-bottom:0.5em;"></span> 
+
+> - 攻撃ごとの影響力と影響範囲をjsonにて設定  
+> - 時間経過でもとに戻ります  
+<img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
+
+---
+
+<br>
+<u><span style="font-size: 18px;"><b>LOD＋ディザリング＋インスタンシング</b></span></u>  
+<br>
+
+<span style="display:block;margin-bottom:0.5em;"></span> 
+
+> - カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。  
+> - また、300個近く草が作成しているのでインスタンシング描画を行っています。
+
+<span style="display:block;margin-bottom:0.5em;"></span> 
+
+| 近く | 遠い |
+|:---:|:---:|
+<img src="sprite\LOD.png" width="300" alt="回避失敗"> | <img src="sprite\LOD2andDhithering.png" width="300" alt="回避成功"> |
+
+
+
+### 🐛 2. 草用デバッグシーン
+
+> - ステージ上の草をランダム配置するための専用デバッグシーンです。  
+> - 納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。  
+
+| 操作 | 内容 |
+|:---|:---|
+| F2 | カメラを自由に操作 |
+| J ボタン | 草を再抽選して再配置 |
+| K ボタン | 現在の配置を JSON に書き出し |
+
+<span style="display:block;margin-bottom:0.5em;"></span>  
+
+<img src="movie\DebugGrassCreate.gif" width="280" alt="デバックシーン">
+
+
+
+---
 
 ### 🎯 3. ミッションシステム
 

@@ -637,9 +637,75 @@ code {
 <br>
 <h2 id="5-技術紹介">5. 技術紹介</h2>
 <h3 id="-1-草システム">🌾 1. 草システム</h3>
-<img src="sprite\UnderPreparation.png" width="280" alt="準備中">  
-<h3 id="-2-デバッグシーン">🐛 2. デバッグシーン</h3>
-<img src="sprite\UnderPreparation.png" width="280" alt="準備中">
+<br>
+<u><span style="font-size: 18px;"><b>頂点シェーダーによるプロシージャルアニメーション</b></span></u>  
+<br>
+<p><span style="display:block;margin-bottom:0.5em;"></span></p>
+<blockquote>
+<ul>
+<li>攻撃ごとの影響力と影響範囲をjsonにて設定</li>
+<li>時間経過でもとに戻ります<br>
+<img src="movie\GrassBend.gif" width="280" alt="草が曲がる"></li>
+</ul>
+</blockquote>
+<hr>
+<br>
+<u><span style="font-size: 18px;"><b>LOD＋ディザリング＋インスタンシング</b></span></u>  
+<br>
+<p><span style="display:block;margin-bottom:0.5em;"></span></p>
+<blockquote>
+<ul>
+<li>カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。</li>
+<li>また、300個近く草が作成しているのでインスタンシング描画を行っています。</li>
+</ul>
+</blockquote>
+<p><span style="display:block;margin-bottom:0.5em;"></span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">近く</th>
+<th style="text-align:center">遠い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="sprite\LOD.png" width="300" alt="回避失敗"></td>
+<td style="text-align:center"><img src="sprite\LOD2andDhithering.png" width="300" alt="回避成功"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-2-草用デバッグシーン">🐛 2. 草用デバッグシーン</h3>
+<blockquote>
+<ul>
+<li>ステージ上の草をランダム配置するための専用デバッグシーンです。</li>
+<li>納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">F2</td>
+<td style="text-align:left">カメラを自由に操作</td>
+</tr>
+<tr>
+<td style="text-align:left">J ボタン</td>
+<td style="text-align:left">草を再抽選して再配置</td>
+</tr>
+<tr>
+<td style="text-align:left">K ボタン</td>
+<td style="text-align:left">現在の配置を JSON に書き出し</td>
+</tr>
+</tbody>
+</table>
+<p><span style="display:block;margin-bottom:0.5em;"></span></p>
+<img src="movie\DebugGrassCreate.gif" width="280" alt="デバックシーン">
+<hr>
 <h3 id="-3-ミッションシステム">🎯 3. ミッションシステム</h3>
 <blockquote>
 <p>ミッションの内部を他のクラスが知らなくていい設計にしました。<br>
