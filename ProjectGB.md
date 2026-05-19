@@ -1,6 +1,6 @@
 <link href="style.css" rel="stylesheet" />
 
-<img src="sprite\title.png" width="600" alt="タイトル画像">
+<img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
 
 ---
 
@@ -231,8 +231,9 @@
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
 
-> - 攻撃ごとの影響力と影響範囲をjsonにて設定  
-> - 時間経過でもとに戻ります  
+> - 地面が平らで何もないのが見た目的に寂しかったため、草を配置して自然なフィールドにしたいと思い実装しました。  
+> - 時間経過で自然にもとに戻るようにしています。
+
 <img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
 
 ---
@@ -243,39 +244,94 @@
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
 
+> 〇 草の描画処理によりFPS低下があったため以下の内容を実装しました。
 > - カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。  
-> - また、300個近く草が作成しているのでインスタンシング描画を行っています。
+> - 300個以上の草が作成しているのでインスタンシング描画を行っています。
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
 
 | 近く | 遠い |
 |:---:|:---:|
-<img src="sprite\LOD.png" width="300" alt="回避失敗"> | <img src="sprite\LOD2andDhithering.png" width="300" alt="回避成功"> |
+<img src="sprite\LOD.png" width="300" alt="近く"> | <img src="sprite\LOD2andDhithering.png" width="300" alt="遠い"> |
 
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
 
+> - 攻撃ごとの影響力、影響範囲などのパラメータを設定できるようにしました。
+> - 攻撃ごとにパラメータがあるので、jsonファイルにて保存、読み込みを行いました。
 
-### 🐛 2. 草用デバッグシーン
-
-> - ステージ上の草をランダム配置するための専用デバッグシーンです。  
-> - 納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。  
-
-| 操作 | 内容 |
-|:---|:---|
-| F2 | カメラを自由に操作 |
-| J ボタン | 草を再抽選して再配置 |
-| K ボタン | 現在の配置を JSON に書き出し |
-
-<span style="display:block;margin-bottom:0.5em;"></span>  
-
-<img src="movie\DebugGrassCreate.gif" width="280" alt="デバックシーン">
-
-
+<br>
 
 ---
 
-### 🎯 3. ミッションシステム
+### 🐛 2. 草用デバッグシーン
 
-> ミッションの内部を他のクラスが知らなくていい設計にしました。  
+> 3dsMaxで1本ずつ手動配置するのは非効率で面白みがないため、ランダム生成とJSON書き出しができる専用シーンを作りました。  
+> 納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。
+
+<div style="display: flex; gap: 24px; align-items: flex-start;">
+  <img src="movie\DebugGrassCreate.gif" width="300" alt="草の再抽選デバッグシーン">
+  <table>
+    <tr><th>操作</th><th>内容</th></tr>
+    <tr><td>F2</td><td>カメラを自由に操作</td></tr>
+    <tr><td>J ボタン</td><td>草を再抽選して再配置</td></tr>
+    <tr><td>K ボタン</td><td>現在の配置を JSON に書き出し</td></tr>
+  </table>
+</div>
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
+
+> - AABBを使った重なり判定で草同士が重ならないように配置しました  
+> - エリアが狭い場合の無限ループを防ぐため、再抽選の上限を設けました  
+> - 草を消してから生成し直すまでに猶予時間を持たせ、見た目が不自然にならないようにしました  
+
+<br>
+
+---
+
+### 🎨 3. テクスチャブレンド（スプラットマップ）
+
+> 草を実装した結果、地面が単色のままでは浮いて見えたため、複数テクスチャをブレンドして自然な地面にしました。  
+> スプラットマップはペイントソフトで手書きし、明るさや彩度もパラメータで調整できるようにしました。
+
+| チャンネル | テクスチャ |
+|:---:|:---:|
+| R（赤） | 草 |
+| G（緑） | 岩土 |
+| B（青） | 腐葉土 |
+
+<div style="display: flex; gap: 24px; align-items: flex-start;">
+  <div>
+    <p><b>スプラットマップ</b></p>
+    <img src="sprite/SplatMapData.png" width="320" alt="スプラットマップ">
+  </div>
+  <div>
+    <p><b>適用前後</b></p>
+    <img src="sprite/SplatMap_before.png" width="300" alt="適用前">
+    <p>▲ 適用前</p>
+    <br>
+    <img src="sprite/SplatMap_after.png" width="300" alt="適用後">
+    <p>▲ 適用後</p>
+  </div>
+</div>
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
+
+> - `SetupSplatShader()` を `Init()` より前に呼ぶ設計にして、シェーダーのセットアップ順序を保証しました  
+> - 草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました  
+
+<br>
+
+---
+
+### 🎯 4. ミッションシステム
+
+> ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。  
 > 新しいミッションを追加するときも、既存のコードを一切触らずに完結します。
 
 <br>
@@ -286,40 +342,50 @@
 > 2. `MissionManager` の `SetupBoss()` に `AddMission` を1行追加  
 > 3. `MissionCondition.h` に条件クラスを追加（条件が新しい場合のみ）
 
+<br>
+
 <img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
+
+> - `MissionEventData` を使った疎結合設計で、Player・Boss はミッションの内部を知らなくていい作りにしました  
+> - `clearedThisFrame_` などの1フレーム限りフラグを丁寧に管理し、UIとのタイミングのずれが起きないようにしました  
+
+<br>
 
 ---
 
-### ⚙️ 4. 当たり判定パイプライン
+### ⚙️ 5. 当たり判定パイプライン
 
-> 3段階で判定コストを最小化
+> 攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。
 
 <img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
 
 ---
 
-### ⚙️ 5. 攻撃タイムライン
+### ⚙️ 6. 攻撃タイムライン
 
-> タイミングを秒数で一括管理
+> 攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる仕組みを使いました。
 
 <img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
 
 ---
 
-### ⚙️ 6. 重み付き抽選AI
+### ⚙️ 7. 重み付き抽選AI
 
-> 距離で行動パターンが変化
+> ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。
 
 <img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
 
 ---
 
-### ⚙️ 7. カメラブレンドシステム
+### ⚙️ 8. カメラブレンドシステム
 
-> 時間指定でなめらかに遷移
+> ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。
 
 <img src="sprite/CameraBlend.png" width="450" alt="カメラ">
-
 
 ---
 
@@ -327,8 +393,8 @@
 
 ## 6. 今後の実装予定
 
-- プレイヤーのスキルを2つ追加予定
-- ボスを2種類追加、攻撃パターンをボス1体につき4種類作成
+- 非同期にする
+- 敵のAIの強化
 
 ---
 
