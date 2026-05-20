@@ -1,4 +1,83 @@
 body {
-    background-color: #1a1a1a;
-    color: #d4d4d4;
+    background-color: #1a3a4a;
+    color: #d8f0f8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #7addf0;
+}
+
+a {
+    color: #a8ddf0;
+}
+
+a:hover {
+    color: #7addf0;
+}
+
+blockquote {
+    border-left: 3px solid #4ac8e8;
+    padding-left: 12px;
+    color: #b8e0f0;
+    margin: 8px 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border-bottom: 0.5px solid #3a7a9a;
+    padding: 6px 10px;
+    color: #b8e0f0;
+}
+
+th {
+    color: #7addf0;
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid #3a7a9a;
+    margin: 20px 0;
+}
+
+code {
+    background-color: #1e3e50;
+    color: #7addf0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 0.5px solid #7ac8e0;
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: #d8f0f8;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.tab-btn:hover {
+    border-color: #4ac8e8;
+    color: #7addf0;
+    background: #1e3e50;
+}
+
+.tab-btn.active {
+    background: #4ac8e8;
+    border-color: #4ac8e8;
+    color: #0d1f2a;
+    font-weight: 500;
 }

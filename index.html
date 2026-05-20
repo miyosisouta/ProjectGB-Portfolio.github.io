@@ -366,7 +366,7 @@ code {
     });
   </script>
 <link href="style.css" rel="stylesheet" />
-<img src="sprite\title.png" width="600" alt="タイトル画像">
+<img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
 <hr>
 <br>
 <h2 id="目次">目次</h2>
@@ -643,20 +643,21 @@ code {
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
 <blockquote>
 <ul>
-<li>攻撃ごとの影響力と影響範囲をjsonにて設定</li>
-<li>時間経過でもとに戻ります<br>
-<img src="movie\GrassBend.gif" width="280" alt="草が曲がる"></li>
+<li>地面が平らで何もないのが見た目的に寂しかったため、草を配置して自然なフィールドにしたいと思い実装しました。</li>
+<li>時間経過で自然にもとに戻るようにしています。</li>
 </ul>
 </blockquote>
+<img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
 <hr>
 <br>
 <u><span style="font-size: 18px;"><b>LOD＋ディザリング＋インスタンシング</b></span></u>  
 <br>
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
 <blockquote>
+<p>〇 草の描画処理によりFPS低下があったため以下の内容を実装しました。</p>
 <ul>
 <li>カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。</li>
-<li>また、300個近く草が作成しているのでインスタンシング描画を行っています。</li>
+<li>300個以上の草が作成しているのでインスタンシング描画を行っています。</li>
 </ul>
 </blockquote>
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
@@ -669,46 +670,103 @@ code {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="sprite\LOD.png" width="300" alt="回避失敗"></td>
-<td style="text-align:center"><img src="sprite\LOD2andDhithering.png" width="300" alt="回避成功"></td>
+<td style="text-align:center"><img src="sprite\LOD.png" width="300" alt="近く"></td>
+<td style="text-align:center"><img src="sprite\LOD2andDhithering.png" width="300" alt="遠い"></td>
 </tr>
 </tbody>
 </table>
-<h3 id="-2-草用デバッグシーン">🐛 2. 草用デバッグシーン</h3>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
 <blockquote>
 <ul>
-<li>ステージ上の草をランダム配置するための専用デバッグシーンです。</li>
-<li>納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。</li>
+<li>攻撃ごとの影響力、影響範囲などのパラメータを設定できるようにしました。</li>
+<li>攻撃ごとにパラメータがあるので、jsonファイルにて保存、読み込みを行いました。</li>
 </ul>
+</blockquote>
+<br>
+<hr>
+<h3 id="-2-草用デバッグシーン">🐛 2. 草用デバッグシーン</h3>
+<blockquote>
+<p>3dsMaxで1本ずつ手動配置するのは非効率で面白みがないため、ランダム生成とJSON書き出しができる専用シーンを作りました。<br>
+納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。</p>
+</blockquote>
+<div style="display: flex; gap: 24px; align-items: flex-start;">
+  <img src="movie\DebugGrassCreate.gif" width="300" alt="草の再抽選デバッグシーン">
+  <table>
+    <tr><th>操作</th><th>内容</th></tr>
+    <tr><td>F2</td><td>カメラを自由に操作</td></tr>
+    <tr><td>J ボタン</td><td>草を再抽選して再配置</td></tr>
+    <tr><td>K ボタン</td><td>現在の配置を JSON に書き出し</td></tr>
+  </table>
+</div>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
+<blockquote>
+<ul>
+<li>AABBを使った重なり判定で草同士が重ならないように配置しました</li>
+<li>エリアが狭い場合の無限ループを防ぐため、再抽選の上限を設けました</li>
+<li>草を消してから生成し直すまでに猶予時間を持たせ、見た目が不自然にならないようにしました</li>
+</ul>
+</blockquote>
+<br>
+<hr>
+<h3 id="-3-テクスチャブレンドスプラットマップ">🎨 3. テクスチャブレンド（スプラットマップ）</h3>
+<blockquote>
+<p>草を実装した結果、地面が単色のままでは浮いて見えたため、複数テクスチャをブレンドして自然な地面にしました。<br>
+スプラットマップはペイントソフトで手書きし、明るさや彩度もパラメータで調整できるようにしました。</p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">操作</th>
-<th style="text-align:left">内容</th>
+<th style="text-align:center">チャンネル</th>
+<th style="text-align:center">テクスチャ</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">F2</td>
-<td style="text-align:left">カメラを自由に操作</td>
+<td style="text-align:center">R（赤）</td>
+<td style="text-align:center">草</td>
 </tr>
 <tr>
-<td style="text-align:left">J ボタン</td>
-<td style="text-align:left">草を再抽選して再配置</td>
+<td style="text-align:center">G（緑）</td>
+<td style="text-align:center">岩土</td>
 </tr>
 <tr>
-<td style="text-align:left">K ボタン</td>
-<td style="text-align:left">現在の配置を JSON に書き出し</td>
+<td style="text-align:center">B（青）</td>
+<td style="text-align:center">腐葉土</td>
 </tr>
 </tbody>
 </table>
-<p><span style="display:block;margin-bottom:0.5em;"></span></p>
-<img src="movie\DebugGrassCreate.gif" width="280" alt="デバックシーン">
-<hr>
-<h3 id="-3-ミッションシステム">🎯 3. ミッションシステム</h3>
+<div style="display: flex; gap: 24px; align-items: flex-start;">
+  <div>
+    <p><b>スプラットマップ</b></p>
+    <img src="sprite/SplatMapData.png" width="320" alt="スプラットマップ">
+  </div>
+  <div>
+    <p><b>適用前後</b></p>
+    <img src="sprite/SplatMap_before.png" width="300" alt="適用前">
+    <p>▲ 適用前</p>
+    <br>
+    <img src="sprite/SplatMap_after.png" width="300" alt="適用後">
+    <p>▲ 適用後</p>
+  </div>
+</div>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
 <blockquote>
-<p>ミッションの内部を他のクラスが知らなくていい設計にしました。<br>
+<ul>
+<li><code>SetupSplatShader()</code> を <code>Init()</code> より前に呼ぶ設計にして、シェーダーのセットアップ順序を保証しました</li>
+<li>草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました</li>
+</ul>
+</blockquote>
+<br>
+<hr>
+<h3 id="-4-ミッションシステム">🎯 4. ミッションシステム</h3>
+<blockquote>
+<p>ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。<br>
 新しいミッションを追加するときも、既存のコードを一切触らずに完結します。</p>
 </blockquote>
 <br>
@@ -720,37 +778,48 @@ code {
 <li><code>MissionCondition.h</code> に条件クラスを追加（条件が新しい場合のみ）</li>
 </ol>
 </blockquote>
+<br>
 <img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
-<hr>
-<h3 id="️-4-当たり判定パイプライン">⚙️ 4. 当たり判定パイプライン</h3>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<br>
 <blockquote>
-<p>3段階で判定コストを最小化</p>
+<ul>
+<li><code>MissionEventData</code> を使った疎結合設計で、Player・Boss はミッションの内部を知らなくていい作りにしました</li>
+<li><code>clearedThisFrame_</code> などの1フレーム限りフラグを丁寧に管理し、UIとのタイミングのずれが起きないようにしました</li>
+</ul>
+</blockquote>
+<br>
+<hr>
+<h3 id="️-5-当たり判定パイプライン">⚙️ 5. 当たり判定パイプライン</h3>
+<blockquote>
+<p>攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。</p>
 </blockquote>
 <img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
 <hr>
-<h3 id="️-5-攻撃タイムライン">⚙️ 5. 攻撃タイムライン</h3>
+<h3 id="️-6-攻撃タイムライン">⚙️ 6. 攻撃タイムライン</h3>
 <blockquote>
-<p>タイミングを秒数で一括管理</p>
+<p>攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる仕組みを使いました。</p>
 </blockquote>
 <img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
 <hr>
-<h3 id="️-6-重み付き抽選ai">⚙️ 6. 重み付き抽選AI</h3>
+<h3 id="️-7-重み付き抽選ai">⚙️ 7. 重み付き抽選AI</h3>
 <blockquote>
-<p>距離で行動パターンが変化</p>
+<p>ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。</p>
 </blockquote>
 <img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
 <hr>
-<h3 id="️-7-カメラブレンドシステム">⚙️ 7. カメラブレンドシステム</h3>
+<h3 id="️-8-カメラブレンドシステム">⚙️ 8. カメラブレンドシステム</h3>
 <blockquote>
-<p>時間指定でなめらかに遷移</p>
+<p>ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。</p>
 </blockquote>
 <img src="sprite/CameraBlend.png" width="450" alt="カメラ">
 <hr>
 <br>
 <h2 id="6-今後の実装予定">6. 今後の実装予定</h2>
 <ul>
-<li>プレイヤーのスキルを2つ追加予定</li>
-<li>ボスを2種類追加、攻撃パターンをボス1体につき4種類作成</li>
+<li>非同期にする</li>
+<li>敵のAIの強化</li>
 </ul>
 <hr>
 <p><a href="#%E7%9B%AE%E6%AC%A1">目次へ戻る</a></p>
