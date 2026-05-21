@@ -1,4 +1,98 @@
-<link href="style.css" rel="stylesheet" />
+<style>
+body {
+    background-color: #1a3a4a;
+    color: #d8f0f8;
+    max-width: 800px;
+    margin: 0;
+    padding: 0 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #7addf0;
+}
+
+h2 {
+    border-bottom: 1px solid #4ac8e8;
+    padding-bottom: 6px;
+}
+
+a {
+    color: #a8ddf0;
+}
+
+a:hover {
+    color: #7addf0;
+}
+
+blockquote {
+    border-left: 3px solid #4ac8e8;
+    padding-left: 12px;
+    color: #b8e0f0;
+    margin: 8px 0;
+}
+
+table {
+    border-collapse: collapse !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+td, th {
+    border-bottom: 0.5px solid #3a7a9a;
+    padding: 6px 10px;
+    color: #b8e0f0;
+}
+
+th {
+    color: #7addf0;
+}
+
+hr {
+    border: none;
+    border-top: 0.5px solid #3a7a9a;
+    margin: 20px 0;
+}
+
+code {
+    background-color: #1e3e50;
+    color: #7addf0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 0.5px solid #7ac8e0;
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: #d8f0f8;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.tab-btn:hover {
+    border-color: #4ac8e8;
+    color: #7addf0;
+    background: #1e3e50;
+}
+
+.tab-btn.active {
+    background: #4ac8e8;
+    border-color: #4ac8e8;
+    color: #0d1f2a;
+    font-weight: 500;
+}
+</style>
 
 <img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
 
@@ -16,6 +110,7 @@
 | 4 | [担当コード](#4-担当コード) |
 | 5 | [技術紹介](#5-技術紹介) |
 | 6 | [今後の実装予定](#6-今後の実装予定) |
+
 
 <br>
 
@@ -80,105 +175,64 @@
 > アウトゲームにて挑戦するボスを選択できます。  
 > 選択したボスを倒すことがゲームの目標です。
 
-| ゴリラ |
-|:---:|
-<img src="movie\BossAppearance.gif" width="300" alt="ボス1登場シーン"> 
+<img src="movie\BossAppearance.gif" width="450" alt="ボス1登場シーン">
 
 ---
 
 ### 🕹️ プレイヤーアクション
 
 <br>
-<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>  
+<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>
 <br>
 
-#### 噛みつき
+| 噛みつき |
+|:---:|
+<img src="movie\PlayerNormalAttack.gif" width="300" alt="プレイヤーの通常攻撃"> |
 
-<img src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
 
-
----
 <br>
-<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>  
-<br>
-
-#### デフォルト攻撃
-
-<img src="movie\PlayerDefaultAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
-
-#### 地雷
-
-<img src="movie\PlayerLandMine.gif" width="450" alt="プレイヤーの地雷">
-
-#### 火魔法
-
-<img src="movie\PlayerFireMagic.gif" width="450" alt="プレイヤーの火魔法">
-
-
----
-<br>
-<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>  
+<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>
 <br>
 
-#### 回避
+| デフォルト攻撃 | 地雷 | 火魔法 |
+|:---:|:---:|:---:|
+<img src="movie\PlayerDefaultAttaack.gif" width="250" alt="プレイヤーの特殊攻撃"> | <img src="movie\PlayerLandMine.gif" width="250" alt="プレイヤーの地雷"> | <img src="movie\PlayerFireMagic.gif" width="250" alt="プレイヤーの火魔法"> |
+
+
+<br>
+<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>
+<br>
 
 > ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。
 
-| ダメージあり | 回避成功 |
+| 回避（ダメージあり） | 回避（成功） |
 |:---:|:---:|
 <img src="movie\PlayerAvoidFailure.gif" width="300" alt="回避失敗"> | <img src="movie\PlayerAvoidSuccess.gif" width="300" alt="回避成功"> |
 
 
----
 <br>
 
 ### 👾 ボスの攻撃パターン
 
-#### 通常攻撃
-
-<img src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
-
-
-#### 回転攻撃
-
-<img src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
-
-
-#### ヒットスタンプ
-
-<img src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
-
+| 通常攻撃 | 回転攻撃 | ヒットスタンプ |
+|:---:|:---:|:---:|
+<img src="movie\BossNormalAttack.gif" width="250" alt="ボスの通常攻撃"> | <img src="movie\BossSpinAttack.gif" width="250" alt="ボスの回転攻撃"> | <img src="movie\BossHitStamp.gif" width="250" alt="ボスのヒットスタンプ"> |
 
 #### レーザー攻撃
 
 | 通常 | 3連射 | チャージ |
 |:---:|:---:|:---:|
-<img src="movie\BossNormalLaser.gif" width="300" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="300" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="300" alt="レーザーチャージ"> |
+<img src="movie\BossNormalLaser.gif" width="250" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="250" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="250" alt="レーザーチャージ"> |
 
 ---
 
-### 🔊 音量設定
+### ⚙️ 設定
 
-<img src="movie\SoundSetting.gif" width="450" alt="音量設定">
-
-<br>
-
----
-
-###  🎮 キーコンフィグ
-
-<img src="movie\SoundSetting.gif" width="450" alt="キー設定">
+| 🔊 音量設定 | 🎮 キーコンフィグ | 📷 カメラ設定 |
+|:---:|:---:|:---:|
+<img src="movie\SoundSetting.gif" width="250" alt="音量設定"> | <img src="movie\KeyConfig.gif" width="250" alt="キー設定"> | <img src="sprite\UnderPreparation.png" width="250" alt="カメラ設定"> |
 
 <br>
-
----
-
-### 📷 カメラ
-
-<img src="movie\SoundSetting.gif" width="450" alt="カメラ設定">
-
-<br>
-
 
 ## 4. 担当コード
 
@@ -236,6 +290,14 @@
 
 <img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
 
+
+<br>
+<u><span style="font-size: 20px;"><b>なぜ頂点シェーダーか</b></span></u>
+<br>
+
+> - インスタンシング描画と頂点シェーダーの相性がいいため。
+> - LODやデータ管理が非常にシンプルで済むため
+> - GPUの処理が比較的軽かったため
 ---
 
 <br>
@@ -244,9 +306,14 @@
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
 
-> 〇 草の描画処理によりFPS低下があったため以下の内容を実装しました。
-> - カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。  
-> - 300個以上の草が作成しているのでインスタンシング描画を行っています。
+
+| 技術 | 採用理由 |
+|:---|:---|
+| LOD | 草のモデルが多くGPUの処理が重かったため、距離に応じてモデルを切り替えて負荷を下げた |
+| ディザリング | LODでモデルを切り替えたときの境界が目立ったため、距離が遠いほどディザがかかるようにして切り替えを目立ちにくくした |
+| インスタンシング | 300個以上の草をすべて個別に描画するとCPU側のドローコールが膨大になるため、一括描画で削減した |
+| LOD ＋ ディザリング |LODでモデルを切り替えたときが目立ったので、カメラとの距離が遠いほど、ディザがかかるようにすることで目立ちづらくしました。|
+
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
 
@@ -255,13 +322,20 @@
 <img src="sprite\LOD.png" width="300" alt="近く"> | <img src="sprite\LOD2andDhithering.png" width="300" alt="遠い"> |
 
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+
+<u><span style="font-size: 16px;"><b>こだわった点</b></span></u>
+
+> - 攻撃ごとの影響力、影響範囲などのパラメータをJSONで設定できるようにしました
+> - 単発攻撃には `AddSource`、スピン攻撃など連続攻撃には `SetSource` とAPIを使い分けました
+
 <br>
 
-> - 攻撃ごとの影響力、影響範囲などのパラメータを設定できるようにしました。
-> - 攻撃ごとにパラメータがあるので、jsonファイルにて保存、読み込みを行いました。
+| 単発攻撃（AddSource） | スピン攻撃（SetSource） |
+|:---:|:---:|
+| <img src="movie\Grass_Single_Bend.gif" width="280" alt="単発攻撃の草曲げ"> | <img src="movie\Grass_Spin_Bend.gif" width="280" alt="スピン攻撃の草曲げ"> |
 
-<br>
+> - スピン攻撃用に固定スロット `SPIN_ATTACK_SLOT` を設けて他の攻撃と干渉しないようにしました
+> - LOD0・LOD1のみ草曲げシェーダーを適用し、遠景のLOD2はデフォルトシェーダーで軽量化しました
 
 ---
 
@@ -281,14 +355,24 @@
 </div>
 
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. ステージに配置した2点の座標から草を生成する範囲を計算する
+> 2. その範囲内でランダムに座標を生成する
+> 3. AABBで既存の草と重なりチェックを行う
+> 4. 重ならなければ配置、重なれば再抽選する（無限ループ防止のため上限100回）
+> 5. 300個分繰り返す
+> 6. 納得いく配置が生成されたらJSONに書き出す
+> 7. インゲームでJSONを読み込んで草を配置する
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
 <br>
 
-> - AABBを使った重なり判定で草同士が重ならないように配置しました  
-> - エリアが狭い場合の無限ループを防ぐため、再抽選の上限を設けました  
-> - 草を消してから生成し直すまでに猶予時間を持たせ、見た目が不自然にならないようにしました  
-
-<br>
+> - AABBを使った重なり判定で草同士が重ならないように配置しました
+> - エリアが狭い場合の無限ループを防ぐため、再抽選の上限を設けました
+> - 草を消してから生成し直すまでに猶予時間を持たせ、見た目が不自然にならないようにしました
 
 ---
 
@@ -319,57 +403,99 @@
 </div>
 
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. ペイントソフトでRGBスプラットマップを手書きする（R=草・G=岩土・B=腐葉土）
+> 2. `SetupSplatShader()` でスプラットマップと3種類のテクスチャをシェーダーに渡す
+> 3. シェーダー側でスプラットマップのピクセルのRGB値を読み取る
+> 4. RGB値の割合に応じて3種類のテクスチャをブレンドして描画する
+> 5. 明るさ・彩度パラメータで色味を調整する
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
 <br>
 
-> - `SetupSplatShader()` を `Init()` より前に呼ぶ設計にして、シェーダーのセットアップ順序を保証しました  
-> - 草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました  
-
-<br>
+> - `SetupSplatShader()` を `Init()` より前に呼ぶ設計にして、シェーダーのセットアップ順序を保証しました
+> - 草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました
 
 ---
-
-### 🎯 4. ミッションシステム
-
-> ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。  
-> 新しいミッションを追加するときも、既存のコードを一切触らずに完結します。
-
-<br>
-
-<u><span style="font-size: 20px;"><b>新ミッション追加手順</b></span></u>
-
-> 1. `MissionType.h` の `MissionID` に新しいIDを1行追加  
-> 2. `MissionManager` の `SetupBoss()` に `AddMission` を1行追加  
-> 3. `MissionCondition.h` に条件クラスを追加（条件が新しい場合のみ）
-
-<br>
 
 <img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
 
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. ボスの種類に応じて `MissionManager::InitByBossType()` でミッションを初期化する
+> 2. プレイヤーやボスのアクションが発生したら `MissionManager::Notify〇〇()` でイベントを通知する
+> 3. `MissionManager` が各 `Mission` にイベントを転送する
+> 4. `Mission` が `MissionConditionBase` に条件チェックを委譲する
+> 5. 条件を満たしたら 1フレームだけ判定を行う用のフラグを立てて状態を `Cleared` に遷移させる
+> 6. UIがフラグを読み取ってクリア演出を再生する
+
 <br>
 
-> - `MissionEventData` を使った疎結合設計で、Player・Boss はミッションの内部を知らなくていい作りにしました  
-> - `clearedThisFrame_` などの1フレーム限りフラグを丁寧に管理し、UIとのタイミングのずれが起きないようにしました  
+<u><span style="font-size: 16px;"><b>新ミッション追加手順</b></span></u>
+
+> 1. `MissionType.h` の `MissionID` に新しいIDを1行追加
+> 2. `MissionManager` の `SetupBoss()` に `AddMission` を1行追加
+> 3. `MissionCondition.h` に条件クラスを追加（条件が新しい場合のみ）
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
+<br>
+
+> - `MissionEventData` を使った疎結合設計で、Player・Boss はミッションの内部を知らなくていい作りにしました
+> - `clearedThisFrame_` などの1フレーム限りフラグを丁寧に管理し、UIとのタイミングのずれが起きないようにしました
 
 <br>
 
 ---
 
-### ⚙️ 5. 当たり判定パイプライン
+### 💥 5. 当たり判定パイプライン
 
 > 攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。
 
 <img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
 
+<br>
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. Broadphase（広域判定）でBVH（2分木）を使って衝突候補のペアを絞り込む
+> 2. オブジェクト1つ1つを球で包み、球同士が当たらなければ判定を弾く
+> 3. 2でかなり候補を絞った上で、形状ごとに正確な衝突判定を行う
+> 4. 衝突ペアを `CollisionHitManager` に登録する
+> 5. 状態ごとの処理がやりやすいよう `Enter`・`Stay`・`Exit` の3段階に分ける
+> 6. 状態に応じてダメージ処理や演出を実行する
+
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
+<br>
+
+> - ビットマスクで攻撃属性と被弾属性を管理し、「誰の攻撃が誰に当たるか」を柔軟に設定できるようにしました
+> - 形状タイプをID順に並べ替えることで、`Sphere vs Box` と `Box vs Sphere` の重複実装をなくしました
+> - `Enter`・`Stay`・`Exit` の3状態管理で、ダメージ処理を一度だけ・継続・離脱時に実行できるようにしました
+
+<br>
+
 ---
 
 ### ⚙️ 6. 攻撃タイムライン
 
-> 攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる仕組みを使いました。
+> 攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる `TaskSchedulerSystem` を利用して演出を実装しました。
 
 <img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
+
+<br>
+
+<u><span style="font-size: 16px;"><b>活用した内容</b></span></u>
+
+> - ヒットスタンプ攻撃では「準備 → 上昇 → 空中待機 → 急降下 → 着地」の各フェーズの切り替えタイミングを秒数で管理しました
+> - レーザー攻撃では「予測 → 発射 → 連射」の間隔をタイマーで制御し、攻撃パターンごとに時間を変えています
+
+<br>
 
 ---
 
@@ -377,17 +503,53 @@
 
 > ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。
 
-<img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
+<img src="sprite/WeightedLottery.png" width="450" alt="重み付き抽選AI">
+
+<br>
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. プレイヤーとの距離を計算し、近距離・中距離・遠距離・射程外の4段階に分類する
+> 2. 距離に対応した攻撃パターンリストを取得する
+> 3. 0〜9の乱数を生成し、各攻撃の重みを累積して比較する
+> 4. 乱数が累積値を下回った時点でその攻撃に決定し、ボスのステートを切り替える
+> 5. ステートが終わったら待機（Idle）を挟んで次の行動を選び直す
+
+<br>
+
+<u><span style="font-size: 16px;"><b>この設計で生じるメリット</b></span></u>
+
+> - 距離によって行動パターンが変化するため、プレイヤーが一定の位置にいると単調にならない
+> - 重みの数値を変えるだけで攻撃頻度を調整できるため、バランス調整が容易
+> - 新しいボスを追加する際は攻撃ルールを1つ追加するだけで対応できる
+> - ボス本体のコードを一切変えずにAIの行動パターンを変更できる
+
+<br>
 
 ---
-
 ### ⚙️ 8. カメラブレンドシステム
 
 > ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。
 
-<img src="sprite/CameraBlend.png" width="450" alt="カメラ">
+<img src="sprite/CameraBlend.png" width="450" alt="カメラブレンド">
 
----
+<br>
+
+<u><span style="font-size: 16px;"><b>処理の流れ</b></span></u>
+
+> 1. `SwitchCamera()` でカメラの切り替えを要求し、ブレンド時間を指定する
+> 2. ブレンド開始時点のカメラ位置・ターゲット・視野角を保存する
+> 3. 毎フレーム経過時間をブレンド時間で割り、0〜1の補間値を計算する
+> 4. `CameraData::Lerp()` で現在のカメラと切り替え先のカメラを線形補間する
+> 5. 補間値が1.0に達したら切り替え完了とし、新しいカメラをアクティブにする
+
+<br>
+
+<u><span style="font-size: 16px;"><b>この設計で生じるメリット</b></span></u>
+
+> - ブレンド時間を引数で指定するだけでどのカメラ切り替えにも対応できる
+> - `ICameraController` インターフェースを挟んでいるため、新しいカメラを追加しても既存コードを変更しなくていい
+> - 位置・ターゲット・視野角をすべて補間しているため、どんな角度からの切り替えでも自然に見える
 
 <br>
 

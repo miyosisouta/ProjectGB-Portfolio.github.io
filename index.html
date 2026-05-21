@@ -369,45 +369,95 @@ code {
 body {
     background-color: #1a3a4a;
     color: #d8f0f8;
+    max-width: 800px;
+    margin: 0;
+    padding: 0 24px;
 }
+
 h1, h2, h3, h4, h5, h6 {
     color: #7addf0;
 }
+
+h2 {
+    border-bottom: 1px solid #4ac8e8;
+    padding-bottom: 6px;
+}
+
 a {
     color: #a8ddf0;
 }
+
 a:hover {
     color: #7addf0;
 }
+
 blockquote {
     border-left: 3px solid #4ac8e8;
     padding-left: 12px;
     color: #b8e0f0;
     margin: 8px 0;
 }
+
 table {
-    border-collapse: collapse;
-    width: 100%;
+    border-collapse: collapse !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
 }
+
 td, th {
     border-bottom: 0.5px solid #3a7a9a;
     padding: 6px 10px;
     color: #b8e0f0;
 }
+
 th {
     color: #7addf0;
 }
+
 hr {
     border: none;
     border-top: 0.5px solid #3a7a9a;
     margin: 20px 0;
 }
+
 code {
     background-color: #1e3e50;
     color: #7addf0;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 13px;
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 0.5px solid #7ac8e0;
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: #d8f0f8;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.tab-btn:hover {
+    border-color: #4ac8e8;
+    color: #7addf0;
+    background: #1e3e50;
+}
+
+.tab-btn.active {
+    background: #4ac8e8;
+    border-color: #4ac8e8;
+    color: #0d1f2a;
+    font-weight: 500;
 }
 </style>
 <img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
@@ -564,48 +614,54 @@ code {
 <p>アウトゲームにて挑戦するボスを選択できます。<br>
 選択したボスを倒すことがゲームの目標です。</p>
 </blockquote>
+<img src="movie\BossAppearance.gif" width="450" alt="ボス1登場シーン">
+<hr>
+<h3 id="️-プレイヤーアクション">🕹️ プレイヤーアクション</h3>
+<br>
+<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>
+<br>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">ゴリラ</th>
+<th style="text-align:center">噛みつき</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="movie\BossAppearance.gif" width="300" alt="ボス1登場シーン"></td>
+<td style="text-align:center"><img src="movie\PlayerNormalAttack.gif" width="300" alt="プレイヤーの通常攻撃"></td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h3 id="️-プレイヤーアクション">🕹️ プレイヤーアクション</h3>
 <br>
-<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>  
+<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>
 <br>
-<h4 id="噛みつき">噛みつき</h4>
-<img src="movie\PlayerNormalAttack.gif" width="450" alt="プレイヤーの通常攻撃">
-<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">デフォルト攻撃</th>
+<th style="text-align:center">地雷</th>
+<th style="text-align:center">火魔法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\PlayerDefaultAttaack.gif" width="250" alt="プレイヤーの特殊攻撃"></td>
+<td style="text-align:center"><img src="movie\PlayerLandMine.gif" width="250" alt="プレイヤーの地雷"></td>
+<td style="text-align:center"><img src="movie\PlayerFireMagic.gif" width="250" alt="プレイヤーの火魔法"></td>
+</tr>
+</tbody>
+</table>
 <br>
-<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>  
+<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>
 <br>
-<h4 id="デフォルト攻撃">デフォルト攻撃</h4>
-<img src="movie\PlayerDefaultAttaack.gif" width="450" alt="プレイヤーの特殊攻撃">
-<h4 id="地雷">地雷</h4>
-<img src="movie\PlayerLandMine.gif" width="450" alt="プレイヤーの地雷">
-<h4 id="火魔法">火魔法</h4>
-<img src="movie\PlayerFireMagic.gif" width="450" alt="プレイヤーの火魔法">
-<hr>
-<br>
-<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>  
-<br>
-<h4 id="回避">回避</h4>
 <blockquote>
 <p>ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。</p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">ダメージあり</th>
-<th style="text-align:center">回避成功</th>
+<th style="text-align:center">回避（ダメージあり）</th>
+<th style="text-align:center">回避（成功）</th>
 </tr>
 </thead>
 <tbody>
@@ -615,15 +671,24 @@ code {
 </tr>
 </tbody>
 </table>
-<hr>
 <br>
 <h3 id="-ボスの攻撃パターン">👾 ボスの攻撃パターン</h3>
-<h4 id="通常攻撃">通常攻撃</h4>
-<img src="movie\BossNormalAttack.gif" width="450" alt="ボスの通常攻撃">
-<h4 id="回転攻撃">回転攻撃</h4>
-<img src="movie\BossSpinAttack.gif" width="450" alt="ボスの回転攻撃">
-<h4 id="ヒットスタンプ">ヒットスタンプ</h4>
-<img src="movie\BossHitStamp.gif" width="450" alt="ボスのヒットスタンプ">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">通常攻撃</th>
+<th style="text-align:center">回転攻撃</th>
+<th style="text-align:center">ヒットスタンプ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\BossNormalAttack.gif" width="250" alt="ボスの通常攻撃"></td>
+<td style="text-align:center"><img src="movie\BossSpinAttack.gif" width="250" alt="ボスの回転攻撃"></td>
+<td style="text-align:center"><img src="movie\BossHitStamp.gif" width="250" alt="ボスのヒットスタンプ"></td>
+</tr>
+</tbody>
+</table>
 <h4 id="レーザー攻撃">レーザー攻撃</h4>
 <table>
 <thead>
@@ -635,23 +700,30 @@ code {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="movie\BossNormalLaser.gif" width="300" alt="レーザー通常"></td>
-<td style="text-align:center"><img src="movie\BossMultLaser.gif" width="300" alt="レーザー3連射"></td>
-<td style="text-align:center"><img src="movie\BossChargeLaser.gif" width="300" alt="レーザーチャージ"></td>
+<td style="text-align:center"><img src="movie\BossNormalLaser.gif" width="250" alt="レーザー通常"></td>
+<td style="text-align:center"><img src="movie\BossMultLaser.gif" width="250" alt="レーザー3連射"></td>
+<td style="text-align:center"><img src="movie\BossChargeLaser.gif" width="250" alt="レーザーチャージ"></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="-音量設定">🔊 音量設定</h3>
-<img src="movie\SoundSetting.gif" width="450" alt="音量設定">
-<br>
-<hr>
-<h3 id="-キーコンフィグ">🎮 キーコンフィグ</h3>
-<img src="movie\SoundSetting.gif" width="450" alt="キー設定">
-<br>
-<hr>
-<h3 id="-カメラ">📷 カメラ</h3>
-<img src="movie\SoundSetting.gif" width="450" alt="カメラ設定">
+<h3 id="️-設定">⚙️ 設定</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">🔊 音量設定</th>
+<th style="text-align:center">🎮 キーコンフィグ</th>
+<th style="text-align:center">📷 カメラ設定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\SoundSetting.gif" width="250" alt="音量設定"></td>
+<td style="text-align:center"><img src="movie\KeyConfig.gif" width="250" alt="キー設定"></td>
+<td style="text-align:center"><img src="sprite\UnderPreparation.png" width="250" alt="カメラ設定"></td>
+</tr>
+</tbody>
+</table>
 <br>
 <h2 id="4-担当コード">4. 担当コード</h2>
 <h3 id="-プレイヤー">👤 プレイヤー</h3>
@@ -666,7 +738,7 @@ code {
 <p><code>ISkill</code> <code>NormalAttack</code> <code>AbilityBase</code> <code>DefaultAttack</code> <code>Utility</code> <code>Bomb</code> <code>Magic</code></p>
 <h3 id="-当たり判定">💥 当たり判定</h3>
 <p><code>GhostBody</code> <code>GhostBodyManager</code> <code>GhostPrimitive</code> <code>BroadphaseInterface</code> <code>BroadphaseImpl</code> <code>CollisionHitManager</code> <code>BoundingVolume</code> <code>PhysicalBody</code></p>
-<h3 id="-カメラ-1">🎥 カメラ</h3>
+<h3 id="-カメラ">🎥 カメラ</h3>
 <p><code>CameraCommon</code> <code>CameraController</code> <code>CameraManager</code> <code>CameraSteering</code></p>
 <h3 id="️-ステージ">🏔️ ステージ</h3>
 <p><code>StageBase</code> <code>StageManager</code> <code>StaticObject</code></p>
@@ -692,18 +764,47 @@ code {
 </ul>
 </blockquote>
 <img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
+<br>
+<u><span style="font-size: 20px;"><b>なぜ頂点シェーダーか</b></span></u>
+<br>
+<blockquote>
+<ul>
+<li>インスタンシング描画と頂点シェーダーの相性がいいため。</li>
+<li>LODやデータ管理が非常にシンプルで済むため</li>
+<li>GPUの処理が比較的軽かったため</li>
+</ul>
+</blockquote>
 <hr>
 <br>
 <u><span style="font-size: 18px;"><b>LOD＋ディザリング＋インスタンシング</b></span></u>  
 <br>
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
-<blockquote>
-<p>〇 草の描画処理によりFPS低下があったため以下の内容を実装しました。</p>
-<ul>
-<li>カメラからの距離に応じて、モデルの切り替えとディザリングを行っています。</li>
-<li>300個以上の草が作成しているのでインスタンシング描画を行っています。</li>
-</ul>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">技術</th>
+<th style="text-align:left">採用理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">LOD</td>
+<td style="text-align:left">草のモデルが多くGPUの処理が重かったため、距離に応じてモデルを切り替えて負荷を下げた</td>
+</tr>
+<tr>
+<td style="text-align:left">ディザリング</td>
+<td style="text-align:left">LODでモデルを切り替えたときの境界が目立ったため、距離が遠いほどディザがかかるようにして切り替えを目立ちにくくした</td>
+</tr>
+<tr>
+<td style="text-align:left">インスタンシング</td>
+<td style="text-align:left">300個以上の草をすべて個別に描画するとCPU側のドローコールが膨大になるため、一括描画で削減した</td>
+</tr>
+<tr>
+<td style="text-align:left">LOD ＋ ディザリング</td>
+<td style="text-align:left">LODでモデルを切り替えたときが目立ったので、カメラとの距離が遠いほど、ディザがかかるようにすることで目立ちづらくしました。</td>
+</tr>
+</tbody>
+</table>
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
 <table>
 <thead>
@@ -720,15 +821,34 @@ code {
 </tbody>
 </table>
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
-<br>
+<p><u><span style="font-size: 16px;"><b>こだわった点</b></span></u></p>
 <blockquote>
 <ul>
-<li>攻撃ごとの影響力、影響範囲などのパラメータを設定できるようにしました。</li>
-<li>攻撃ごとにパラメータがあるので、jsonファイルにて保存、読み込みを行いました。</li>
+<li>攻撃ごとの影響力、影響範囲などのパラメータをJSONで設定できるようにしました</li>
+<li>単発攻撃には <code>AddSource</code>、スピン攻撃など連続攻撃には <code>SetSource</code> とAPIを使い分けました</li>
 </ul>
 </blockquote>
 <br>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">単発攻撃（AddSource）</th>
+<th style="text-align:center">スピン攻撃（SetSource）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\Grass_Single_Bend.gif" width="280" alt="単発攻撃の草曲げ"></td>
+<td style="text-align:center"><img src="movie\Grass_Spin_Bend.gif" width="280" alt="スピン攻撃の草曲げ"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<ul>
+<li>スピン攻撃用に固定スロット <code>SPIN_ATTACK_SLOT</code> を設けて他の攻撃と干渉しないようにしました</li>
+<li>LOD0・LOD1のみ草曲げシェーダーを適用し、遠景のLOD2はデフォルトシェーダーで軽量化しました</li>
+</ul>
+</blockquote>
 <hr>
 <h3 id="-2-草用デバッグシーン">🐛 2. 草用デバッグシーン</h3>
 <blockquote>
@@ -745,7 +865,20 @@ code {
   </table>
 </div>
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li>ステージに配置した2点の座標から草を生成する範囲を計算する</li>
+<li>その範囲内でランダムに座標を生成する</li>
+<li>AABBで既存の草と重なりチェックを行う</li>
+<li>重ならなければ配置、重なれば再抽選する（無限ループ防止のため上限100回）</li>
+<li>300個分繰り返す</li>
+<li>納得いく配置が生成されたらJSONに書き出す</li>
+<li>インゲームでJSONを読み込んで草を配置する</li>
+</ol>
+</blockquote>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
 <br>
 <blockquote>
 <ul>
@@ -754,7 +887,6 @@ code {
 <li>草を消してから生成し直すまでに猶予時間を持たせ、見た目が不自然にならないようにしました</li>
 </ul>
 </blockquote>
-<br>
 <hr>
 <h3 id="-3-テクスチャブレンドスプラットマップ">🎨 3. テクスチャブレンド（スプラットマップ）</h3>
 <blockquote>
@@ -798,7 +930,18 @@ code {
   </div>
 </div>
 <br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li>ペイントソフトでRGBスプラットマップを手書きする（R=草・G=岩土・B=腐葉土）</li>
+<li><code>SetupSplatShader()</code> でスプラットマップと3種類のテクスチャをシェーダーに渡す</li>
+<li>シェーダー側でスプラットマップのピクセルのRGB値を読み取る</li>
+<li>RGB値の割合に応じて3種類のテクスチャをブレンドして描画する</li>
+<li>明るさ・彩度パラメータで色味を調整する</li>
+</ol>
+</blockquote>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
 <br>
 <blockquote>
 <ul>
@@ -806,15 +949,22 @@ code {
 <li>草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました</li>
 </ul>
 </blockquote>
-<br>
 <hr>
-<h3 id="-4-ミッションシステム">🎯 4. ミッションシステム</h3>
+<img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
+<br>
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
 <blockquote>
-<p>ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。<br>
-新しいミッションを追加するときも、既存のコードを一切触らずに完結します。</p>
+<ol>
+<li>ボスの種類に応じて <code>MissionManager::InitByBossType()</code> でミッションを初期化する</li>
+<li>プレイヤーやボスのアクションが発生したら <code>MissionManager::Notify〇〇()</code> でイベントを通知する</li>
+<li><code>MissionManager</code> が各 <code>Mission</code> にイベントを転送する</li>
+<li><code>Mission</code> が <code>MissionConditionBase</code> に条件チェックを委譲する</li>
+<li>条件を満たしたら 1フレームだけ判定を行う用のフラグを立てて状態を <code>Cleared</code> に遷移させる</li>
+<li>UIがフラグを読み取ってクリア演出を再生する</li>
+</ol>
 </blockquote>
 <br>
-<p><u><span style="font-size: 20px;"><b>新ミッション追加手順</b></span></u></p>
+<p><u><span style="font-size: 16px;"><b>新ミッション追加手順</b></span></u></p>
 <blockquote>
 <ol>
 <li><code>MissionType.h</code> の <code>MissionID</code> に新しいIDを1行追加</li>
@@ -823,9 +973,7 @@ code {
 </ol>
 </blockquote>
 <br>
-<img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
-<br>
-<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>  
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
 <br>
 <blockquote>
 <ul>
@@ -835,30 +983,103 @@ code {
 </blockquote>
 <br>
 <hr>
-<h3 id="️-5-当たり判定パイプライン">⚙️ 5. 当たり判定パイプライン</h3>
+<h3 id="-5-当たり判定パイプライン">💥 5. 当たり判定パイプライン</h3>
 <blockquote>
 <p>攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。</p>
 </blockquote>
 <img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
+<br>
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li>Broadphase（広域判定）でBVH（2分木）を使って衝突候補のペアを絞り込む</li>
+<li>オブジェクト1つ1つを球で包み、球同士が当たらなければ判定を弾く</li>
+<li>2でかなり候補を絞った上で、形状ごとに正確な衝突判定を行う</li>
+<li>衝突ペアを <code>CollisionHitManager</code> に登録する</li>
+<li>状態ごとの処理がやりやすいよう <code>Enter</code>・<code>Stay</code>・<code>Exit</code> の3段階に分ける</li>
+<li>状態に応じてダメージ処理や演出を実行する</li>
+</ol>
+</blockquote>
+<br>
+<u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
+<br>
+<blockquote>
+<ul>
+<li>ビットマスクで攻撃属性と被弾属性を管理し、「誰の攻撃が誰に当たるか」を柔軟に設定できるようにしました</li>
+<li>形状タイプをID順に並べ替えることで、<code>Sphere vs Box</code> と <code>Box vs Sphere</code> の重複実装をなくしました</li>
+<li><code>Enter</code>・<code>Stay</code>・<code>Exit</code> の3状態管理で、ダメージ処理を一度だけ・継続・離脱時に実行できるようにしました</li>
+</ul>
+</blockquote>
+<br>
 <hr>
 <h3 id="️-6-攻撃タイムライン">⚙️ 6. 攻撃タイムライン</h3>
 <blockquote>
-<p>攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる仕組みを使いました。</p>
+<p>攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる <code>TaskSchedulerSystem</code> を利用して演出を実装しました。</p>
 </blockquote>
 <img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
+<br>
+<p><u><span style="font-size: 16px;"><b>活用した内容</b></span></u></p>
+<blockquote>
+<ul>
+<li>ヒットスタンプ攻撃では「準備 → 上昇 → 空中待機 → 急降下 → 着地」の各フェーズの切り替えタイミングを秒数で管理しました</li>
+<li>レーザー攻撃では「予測 → 発射 → 連射」の間隔をタイマーで制御し、攻撃パターンごとに時間を変えています</li>
+</ul>
+</blockquote>
+<br>
 <hr>
 <h3 id="️-7-重み付き抽選ai">⚙️ 7. 重み付き抽選AI</h3>
 <blockquote>
 <p>ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。</p>
 </blockquote>
-<img src="sprite/WeightedLottery.png" width="450" alt="ステートマシーン">
+<img src="sprite/WeightedLottery.png" width="450" alt="重み付き抽選AI">
+<br>
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li>プレイヤーとの距離を計算し、近距離・中距離・遠距離・射程外の4段階に分類する</li>
+<li>距離に対応した攻撃パターンリストを取得する</li>
+<li>0〜9の乱数を生成し、各攻撃の重みを累積して比較する</li>
+<li>乱数が累積値を下回った時点でその攻撃に決定し、ボスのステートを切り替える</li>
+<li>ステートが終わったら待機（Idle）を挟んで次の行動を選び直す</li>
+</ol>
+</blockquote>
+<br>
+<p><u><span style="font-size: 16px;"><b>この設計で生じるメリット</b></span></u></p>
+<blockquote>
+<ul>
+<li>距離によって行動パターンが変化するため、プレイヤーが一定の位置にいると単調にならない</li>
+<li>重みの数値を変えるだけで攻撃頻度を調整できるため、バランス調整が容易</li>
+<li>新しいボスを追加する際は攻撃ルールを1つ追加するだけで対応できる</li>
+<li>ボス本体のコードを一切変えずにAIの行動パターンを変更できる</li>
+</ul>
+</blockquote>
+<br>
 <hr>
 <h3 id="️-8-カメラブレンドシステム">⚙️ 8. カメラブレンドシステム</h3>
 <blockquote>
 <p>ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。</p>
 </blockquote>
-<img src="sprite/CameraBlend.png" width="450" alt="カメラ">
-<hr>
+<img src="sprite/CameraBlend.png" width="450" alt="カメラブレンド">
+<br>
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li><code>SwitchCamera()</code> でカメラの切り替えを要求し、ブレンド時間を指定する</li>
+<li>ブレンド開始時点のカメラ位置・ターゲット・視野角を保存する</li>
+<li>毎フレーム経過時間をブレンド時間で割り、0〜1の補間値を計算する</li>
+<li><code>CameraData::Lerp()</code> で現在のカメラと切り替え先のカメラを線形補間する</li>
+<li>補間値が1.0に達したら切り替え完了とし、新しいカメラをアクティブにする</li>
+</ol>
+</blockquote>
+<br>
+<p><u><span style="font-size: 16px;"><b>この設計で生じるメリット</b></span></u></p>
+<blockquote>
+<ul>
+<li>ブレンド時間を引数で指定するだけでどのカメラ切り替えにも対応できる</li>
+<li><code>ICameraController</code> インターフェースを挟んでいるため、新しいカメラを追加しても既存コードを変更しなくていい</li>
+<li>位置・ターゲット・視野角をすべて補間しているため、どんな角度からの切り替えでも自然に見える</li>
+</ul>
+</blockquote>
 <br>
 <h2 id="6-今後の実装予定">6. 今後の実装予定</h2>
 <ul>
