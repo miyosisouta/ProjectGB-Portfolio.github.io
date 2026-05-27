@@ -365,7 +365,7 @@ code {
           : 'default'
     });
   </script>
-<style>
+&lt;style>
 body {
     background-color: #1a3a4a;
     color: #d8f0f8;
@@ -459,7 +459,7 @@ code {
     color: #0d1f2a;
     font-weight: 500;
 }
-</style>
+&lt;/style>
 <img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
 <hr>
 <br>
@@ -949,7 +949,80 @@ code {
 <li>草・岩土・腐葉土の明るさと全体の彩度を個別にパラメータで調整できるようにしました</li>
 </ul>
 </blockquote>
+<br>
 <hr>
+<h3 id="-4-攻撃予測インジケーターシステム">🔴 4. 攻撃予測インジケーターシステム</h3>
+<blockquote>
+<p>エフェクトで円形を表現しようとすると引き延ばして使うことになり形が崩れてしまったため、専用のメッシュとシェーダーで実装しました。<br>
+またプレイヤーの攻撃かボスの攻撃か、自分が攻撃を受けるかどうかを見分けられるようにしたかったため実装しました。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Circle</th>
+<th style="text-align:center">Line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie\DamageIndicator_Circle.gif" width="280" alt="Circleインジケーター"></td>
+<td style="text-align:center"><img src="movie\DamageIndicator_Line.gif" width="280" alt="Lineインジケーター"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
+<blockquote>
+<ol>
+<li>攻撃ステートの <code>Enter()</code> で種類（Circle / Line / Box）・座標・サイズ・速度などのパラメータを設定して <code>AttackRange</code> を生成する</li>
+<li>生成時の <code>Start()</code> でメッシュとテクスチャを読み込み、種類に応じたシェーダーをセットして初期トランスフォームをモデルに反映する</li>
+<li>毎フレームの <code>Update()</code> でシェーダーパラメータを更新し、Circle はパルスリング拡大・Line は描画進捗・Box はタイリング値をそれぞれ計算して渡す</li>
+<li>攻撃予測フェーズが終わるタイミングでタスクラムダから <code>SetDraw(false)</code> または <code>DeleteGO</code> を呼んで非表示・削除する</li>
+<li>攻撃ステートの <code>Exit()</code> で <code>DeleteGO</code> を呼び、ステート中断時でもメモリリークが起きないよう確実に破棄する</li>
+</ol>
+</blockquote>
+<br>
+<p><u><span style="font-size: 16px;"><b>実装した内容</b></span></u></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">種類</th>
+<th style="text-align:left">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Circle</td>
+<td style="text-align:left">中心から外縁へ向かうパルスリングアニメーション（攻撃タイミングに同期して正確に外縁到達）</td>
+</tr>
+<tr>
+<td style="text-align:left">Line</td>
+<td style="text-align:left">ボスから対象方向へ徐々に伸びる描画進捗アニメーション（clip命令で先端をリアルタイム制御）</td>
+</tr>
+<tr>
+<td style="text-align:left">Box</td>
+<td style="text-align:left">9スライス UV タイリング（サイズが変わってもテクスチャが崩れない）</td>
+</tr>
+</tbody>
+</table>
+<br>
+<p><u><span style="font-size: 18px;"><b>こだわった点</b></span></u>
+<br></p>
+<blockquote>
+<ul>
+<li>Circle はパルスリングアニメーションを加えることで、攻撃タイミングが視覚的にわかりやすくなるようにしました</li>
+<li>Circle・Line・Box の3種類を用意することで、どのような攻撃形状にも対応できるようにしました</li>
+<li>Line はただ瞬時に表示するのではなく、描画アニメーションを加えて視覚的な面白さを持たせました</li>
+<li>攻撃の予測時間に合わせて <code>pulseSpeed</code> を計算し、リングが攻撃発動タイミングで正確に外縁到達するよう同期しました</li>
+</ul>
+</blockquote>
+<br>
+<hr>
+<h3 id="-5-ミッションシステム">🎯 5. ミッションシステム</h3>
+<blockquote>
+<p>ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。<br>
+新しいミッションを追加するときも、既存のコードを一切触らずに完結します。</p>
+</blockquote>
 <img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
 <br>
 <p><u><span style="font-size: 16px;"><b>処理の流れ</b></span></u></p>
@@ -959,7 +1032,7 @@ code {
 <li>プレイヤーやボスのアクションが発生したら <code>MissionManager::Notify〇〇()</code> でイベントを通知する</li>
 <li><code>MissionManager</code> が各 <code>Mission</code> にイベントを転送する</li>
 <li><code>Mission</code> が <code>MissionConditionBase</code> に条件チェックを委譲する</li>
-<li>条件を満たしたら 1フレームだけ判定を行う用のフラグを立てて状態を <code>Cleared</code> に遷移させる</li>
+<li>条件を満たしたら1フレームだけ判定を行う用のフラグを立てて状態を <code>Cleared</code> に遷移させる</li>
 <li>UIがフラグを読み取ってクリア演出を再生する</li>
 </ol>
 </blockquote>
@@ -983,7 +1056,7 @@ code {
 </blockquote>
 <br>
 <hr>
-<h3 id="-5-当たり判定パイプライン">💥 5. 当たり判定パイプライン</h3>
+<h3 id="-6-当たり判定パイプライン">💥 6. 当たり判定パイプライン</h3>
 <blockquote>
 <p>攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。</p>
 </blockquote>
@@ -1012,7 +1085,7 @@ code {
 </blockquote>
 <br>
 <hr>
-<h3 id="️-6-攻撃タイムライン">⚙️ 6. 攻撃タイムライン</h3>
+<h3 id="️-7-攻撃タイムライン">⚙️ 7. 攻撃タイムライン</h3>
 <blockquote>
 <p>攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる <code>TaskSchedulerSystem</code> を利用して演出を実装しました。</p>
 </blockquote>
@@ -1027,7 +1100,7 @@ code {
 </blockquote>
 <br>
 <hr>
-<h3 id="️-7-重み付き抽選ai">⚙️ 7. 重み付き抽選AI</h3>
+<h3 id="️-8-重み付き抽選ai">⚙️ 8. 重み付き抽選AI</h3>
 <blockquote>
 <p>ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。</p>
 </blockquote>
@@ -1055,7 +1128,7 @@ code {
 </blockquote>
 <br>
 <hr>
-<h3 id="️-8-カメラブレンドシステム">⚙️ 8. カメラブレンドシステム</h3>
+<h3 id="️-9-カメラブレンドシステム">⚙️ 9. カメラブレンドシステム</h3>
 <blockquote>
 <p>ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。</p>
 </blockquote>
@@ -1083,6 +1156,7 @@ code {
 <br>
 <h2 id="6-今後の実装予定">6. 今後の実装予定</h2>
 <ul>
+<li>ダメージエフェクト及びダメージの数値の可視化</li>
 <li>非同期にする</li>
 <li>敵のAIの強化</li>
 </ul>
