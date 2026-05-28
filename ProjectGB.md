@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
 
 ---
