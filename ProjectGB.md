@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="style.css">
-<img src="sprite\mainKeyVisual_logo.png" width="600" alt="タイトル画像">
+<img src="sprite\mainKeyVisual_logo.png" width="750" alt="タイトル画像">
 
 ---
 
@@ -80,7 +80,7 @@
 > アウトゲームにて挑戦するボスを選択できます。  
 > 選択したボスを倒すことがゲームの目標です。
 
-<img src="movie\BossAppearance.gif" width="450" alt="ボス1登場シーン">
+<img src="movie\BossAppearance.gif" width="560" alt="ボス1登場シーン">
 
 ---
 
@@ -92,7 +92,7 @@
 
 | 噛みつき |
 |:---:|
-<img src="movie\PlayerNormalAttack.gif" width="300" alt="プレイヤーの通常攻撃"> |
+<img src="movie\PlayerNormalAttack.gif" width="370" alt="プレイヤーの通常攻撃"> |
 
 
 <br>
@@ -101,7 +101,7 @@
 
 | デフォルト攻撃 | 地雷 | 火魔法 |
 |:---:|:---:|:---:|
-<img src="movie\PlayerDefaultAttaack.gif" width="250" alt="プレイヤーの特殊攻撃"> | <img src="movie\PlayerLandMine.gif" width="250" alt="プレイヤーの地雷"> | <img src="movie\PlayerFireMagic.gif" width="250" alt="プレイヤーの火魔法"> |
+<img src="movie\PlayerDefaultAttaack.gif" width="310" alt="プレイヤーの特殊攻撃"> | <img src="movie\PlayerLandMine.gif" width="310" alt="プレイヤーの地雷"> | <img src="movie\PlayerFireMagic.gif" width="310" alt="プレイヤーの火魔法"> |
 
 
 <br>
@@ -112,7 +112,7 @@
 
 | 回避（ダメージあり） | 回避（成功） |
 |:---:|:---:|
-<img src="movie\PlayerAvoidFailure.gif" width="300" alt="回避失敗"> | <img src="movie\PlayerAvoidSuccess.gif" width="300" alt="回避成功"> |
+<img src="movie\PlayerAvoidFailure.gif" width="370" alt="回避失敗"> | <img src="movie\PlayerAvoidSuccess.gif" width="370" alt="回避成功"> |
 
 
 <br>
@@ -121,13 +121,13 @@
 
 | 通常攻撃 | 回転攻撃 | ヒットスタンプ |
 |:---:|:---:|:---:|
-<img src="movie\BossNormalAttack.gif" width="250" alt="ボスの通常攻撃"> | <img src="movie\BossSpinAttack.gif" width="250" alt="ボスの回転攻撃"> | <img src="movie\BossHitStamp.gif" width="250" alt="ボスのヒットスタンプ"> |
+<img src="movie\BossNormalAttack.gif" width="310" alt="ボスの通常攻撃"> | <img src="movie\BossSpinAttack.gif" width="310" alt="ボスの回転攻撃"> | <img src="movie\BossHitStamp.gif" width="310" alt="ボスのヒットスタンプ"> |
 
 #### レーザー攻撃
 
 | 通常 | 3連射 | チャージ |
 |:---:|:---:|:---:|
-<img src="movie\BossNormalLaser.gif" width="250" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="250" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="250" alt="レーザーチャージ"> |
+<img src="movie\BossNormalLaser.gif" width="310" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="310" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="310" alt="レーザーチャージ"> |
 
 ---
 
@@ -135,7 +135,7 @@
 
 | 🔊 音量設定 | 🎮 キーコンフィグ | 📷 カメラ設定 |
 |:---:|:---:|:---:|
-<img src="movie\SoundSetting.gif" width="250" alt="音量設定"> | <img src="movie\KeyConfig.gif" width="250" alt="キー設定"> | <img src="sprite\UnderPreparation.png" width="250" alt="カメラ設定"> |
+<img src="movie\SoundSetting.gif" width="310" alt="音量設定"> | <img src="movie\KeyConfig.gif" width="310" alt="キー設定"> | <img src="sprite\UnderPreparation.png" width="310" alt="カメラ設定"> |
 
 <br>
 
@@ -193,7 +193,7 @@
 > - 地面が平らで何もないのが見た目的に寂しかったため、草を配置して自然なフィールドにしたいと思い実装しました。  
 > - 時間経過で自然にもとに戻るようにしています。
 
-<img src="movie\GrassBend.gif" width="280" alt="草が曲がる">  
+<img src="movie\GrassBend.gif" width="350" alt="草が曲がる">  
 
 
 <br>
@@ -224,7 +224,7 @@
 
 | 近く | 遠い |
 |:---:|:---:|
-<img src="sprite\LOD.png" width="300" alt="近く"> | <img src="sprite\LOD2andDhithering.png" width="300" alt="遠い"> |
+<img src="sprite\LOD.png" width="370" alt="近く"> | <img src="sprite\LOD2andDhithering.png" width="370" alt="遠い"> |
 
 <br>
 
@@ -237,7 +237,7 @@
 
 | 単発攻撃（AddSource） | スピン攻撃（SetSource） |
 |:---:|:---:|
-| <img src="movie\Grass_Single_Bend.gif" width="280" alt="単発攻撃の草曲げ"> | <img src="movie\Grass_Spin_Bend.gif" width="280" alt="スピン攻撃の草曲げ"> |
+| <img src="movie\Grass_Single_Bend.gif" width="350" alt="単発攻撃の草曲げ"> | <img src="movie\Grass_Spin_Bend.gif" width="350" alt="スピン攻撃の草曲げ"> |
 
 > - スピン攻撃用に固定スロット `SPIN_ATTACK_SLOT` を設けて他の攻撃と干渉しないようにしました
 > - LOD0・LOD1のみ草曲げシェーダーを適用し、遠景のLOD2はデフォルトシェーダーで軽量化しました
@@ -250,7 +250,7 @@
 > 納得いく配置が生成されたら JSON に書き出し、インゲームで読み込みます。
 
 <div style="display: flex; gap: 24px; align-items: flex-start;">
-  <img src="movie\DebugGrassCreate.gif" width="300" alt="草の再抽選デバッグシーン">
+  <img src="movie\DebugGrassCreate.gif" width="370" alt="草の再抽選デバッグシーン">
   <table>
     <tr><th>操作</th><th>内容</th></tr>
     <tr><td>F2</td><td>カメラを自由に操作</td></tr>
@@ -295,14 +295,14 @@
 <div style="display: flex; gap: 24px; align-items: flex-start;">
   <div>
     <p><b>スプラットマップ</b></p>
-    <img src="sprite/SplatMapData.png" width="320" alt="スプラットマップ">
+    <img src="sprite/SplatMapData.png" width="400" alt="スプラットマップ">
   </div>
   <div>
     <p><b>適用前後</b></p>
-    <img src="sprite/SplatMap_before.png" width="300" alt="適用前">
+    <img src="sprite/SplatMap_before.png" width="370" alt="適用前">
     <p>▲ 適用前</p>
     <br>
-    <img src="sprite/SplatMap_after.png" width="300" alt="適用後">
+    <img src="sprite/SplatMap_after.png" width="370" alt="適用後">
     <p>▲ 適用後</p>
   </div>
 </div>
@@ -335,7 +335,7 @@
 
 | Circle | Line |
 |:---:|:---:|
-<img src="movie\DamageIndicator_Circle.gif" width="280" alt="Circleインジケーター"> | <img src="movie\DamageIndicator_Line.gif" width="280" alt="Lineインジケーター"> |
+<img src="movie\DamageIndicator_Circle.gif" width="350" alt="Circleインジケーター"> | <img src="movie\DamageIndicator_Line.gif" width="350" alt="Lineインジケーター"> |
 
 <br>
 
@@ -370,12 +370,13 @@
 <br>
 
 ---
+
 ### 🎯 5. ミッションシステム
 
 > ただ攻撃してボスを倒すだけでは単調なため、プレイヤーに目標を与えるミッションシステムを実装しました。  
 > 新しいミッションを追加するときも、既存のコードを一切触らずに完結します。
 
-<img src="sprite/MissionSystem.png" width="450" alt="ミッションシステム">
+<img src="sprite/MissionSystem.png" width="560" alt="ミッションシステム">
 
 <br>
 
@@ -411,7 +412,7 @@
 
 > 攻撃の対象を柔軟に設定できるようにしたかったため、3段階で判定コストを最小化する仕組みを実装しました。
 
-<img src="sprite/CollisionDetectionPipeline.png" width="450" alt="当たり判定">
+<img src="sprite/CollisionDetectionPipeline.png" width="560" alt="当たり判定">
 
 <br>
 
@@ -440,7 +441,7 @@
 
 > 攻撃ごとに毎回時間計算をUpdateに書くのが大変だったため、タイミングを秒数で一括管理できる `TaskSchedulerSystem` を利用して演出を実装しました。
 
-<img src="sprite/TaskScheduler.png" width="450" alt="ステートタスクスケジュール">
+<img src="sprite/TaskScheduler.png" width="560" alt="ステートタスクスケジュール">
 
 <br>
 
@@ -457,7 +458,7 @@
 
 > ただ攻撃してくるだけでは単調なため、距離別に攻撃の発動率を設定して行動パターンに変化を持たせました。
 
-<img src="sprite/WeightedLottery.png" width="450" alt="重み付き抽選AI">
+<img src="sprite/WeightedLottery.png" width="560" alt="重み付き抽選AI">
 
 <br>
 
@@ -486,7 +487,7 @@
 
 > ボス登場シーンからゲームプレイへ切り替わる際にカメラが瞬間移動すると違和感があるため、時間を指定してなめらかに遷移できるようにしました。
 
-<img src="sprite/CameraBlend.png" width="450" alt="カメラブレンド">
+<img src="sprite/CameraBlend.png" width="560" alt="カメラブレンド">
 
 <br>
 
