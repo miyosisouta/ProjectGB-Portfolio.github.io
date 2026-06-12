@@ -54,7 +54,7 @@
 |　項目　| リンク |
 |---|---|
 | **GitHub** | [miyosisouta/ProjectGB](https://github.com/miyosisouta/ProjectGB.git) |
-| **YouTube** | （動画投稿後に追記予定） |
+| **YouTube** | [がぶっとバスターPV](https://youtu.be/hErKex9rLmE)|
 
 <br>
 
@@ -63,9 +63,9 @@
 | カテゴリ | ツール |
 |---|---|
 | **エンジン** | 学内エンジン（K2Engine） |
-| **エディタ** | Visual Studio 2022 |
+| **エディタ** | Visual Studio 2026 |
 | **使用言語** | C++, HTML |
-| **3D モデル** | 3ds Max 2025 |
+| **3D モデル** | 3ds Max 2026 |
 | **エフェクト** | Effekseer |
 | **画像編集** | Adobe Photoshop |
 | **バージョン管理** | GitHub, Fork |
