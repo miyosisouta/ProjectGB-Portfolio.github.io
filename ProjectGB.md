@@ -5,7 +5,7 @@
 
 <br>
 
-## 目次
+# 目次
 
 | No. | セクション |
 |:---:|---|
@@ -54,7 +54,7 @@
 |　項目　| リンク |
 |---|---|
 | **GitHub** | [miyosisouta/ProjectGB](https://github.com/miyosisouta/ProjectGB.git) |
-| **YouTube** | [がぶっとバスターPV](https://youtu.be/hErKex9rLmE)|
+| **YouTube** | [がぶっとバスターPV](#pv)|
 
 <br>
 
@@ -71,6 +71,7 @@
 | **バージョン管理** | GitHub, Fork |
 
 <br>
+<br>
 
 
 ## 3. ゲーム紹介
@@ -85,7 +86,8 @@
 <br>
 
 ---
-### 🎬 ゲームシーン紹介
+<a id="pv"></a>
+### 🎬 PV
 
 > ゲーム紹介動画です。  
 > 戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。  
@@ -98,7 +100,36 @@
   allowfullscreen>
 </iframe>
 
+<br>
 
+---
+### 🎭 感情システム
+
+#### <u> バフ・デバフの発生条件 </u>
+
+| 内容 | 条件 | ボスの反応 |
+|---|---|---|
+|バフ| ボスの特定攻撃がプレイヤーに命中した場合 | <img src="movie/Buff.gif" width="350" alt="攻撃命中時のボスの反応"> |
+|デバフ| ジャスト回避が成立した場合 | <img src="movie/Debuff.gif" width="350" alt="ジャスト回避成立時のボスの反応"> |
+
+<br>
+
+
+#### <u> 段階ごとの効果 </u>
+
+<img src="sprite/EmotionEffectList.png" width="600" alt="感情システム 各段階の効果一覧">
+
+<br>
+
+#### <u> ボスHP閾値による特殊演出 </u>
+
+| 条件 | 演出 |
+|---|---|
+| ボスHP50%以下 : バフ3段階へ強制移行 | <img src="movie/【ファイル名】.gif" width="350" alt="HP50%以下の特殊演出"> |
+| ボスHP25%以下 : デバフ3段階へ強制移行 | <img src="movie/【ファイル名】.gif" width="350" alt="HP25%以下の特殊演出"> |
+
+<br>
+<br>
 
 ## 4. 担当コード
 

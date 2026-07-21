@@ -369,7 +369,7 @@ code {
 <img src="sprite\mainKeyVisual_logo.png" width="750" alt="タイトル画像">
 <hr>
 <br>
-<h2 id="目次">目次</h2>
+<h1 id="目次">目次</h1>
 <table>
 <thead>
 <tr>
@@ -469,7 +469,7 @@ code {
 </tr>
 <tr>
 <td><strong>YouTube</strong></td>
-<td><a href="https://youtu.be/hErKex9rLmE">がぶっとバスターPV</a></td>
+<td><a href="#pv">がぶっとバスターPV</a></td>
 </tr>
 </tbody>
 </table>
@@ -514,6 +514,7 @@ code {
 </tbody>
 </table>
 <br>
+<br>
 <h2 id="3-ゲーム紹介">3. ゲーム紹介</h2>
 <h3 id="-コンセプト">🎮 コンセプト</h3>
 <table>
@@ -540,7 +541,8 @@ code {
 </table>
 <br>
 <hr>
-<h3 id="-ゲームシーン紹介">🎬 ゲームシーン紹介</h3>
+<p><a id="pv"></a></p>
+<h3 id="-pv">🎬 PV</h3>
 <blockquote>
 <p>ゲーム紹介動画です。<br>
 戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。</p>
@@ -552,6 +554,56 @@ code {
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
+<br>
+<hr>
+<h3 id="-感情システム">🎭 感情システム</h3>
+<h4 id="バフデバフの発生条件"><u> バフ・デバフの発生条件 </u></h4>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>条件</th>
+<th>ボスの反応</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>バフ</td>
+<td>ボスの特定攻撃がプレイヤーに命中した場合</td>
+<td><img src="movie/Buff.gif" width="350" alt="攻撃命中時のボスの反応"></td>
+</tr>
+<tr>
+<td>デバフ</td>
+<td>ジャスト回避が成立した場合</td>
+<td><img src="movie/Debuff.gif" width="350" alt="ジャスト回避成立時のボスの反応"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<h4 id="段階ごとの効果"><u> 段階ごとの効果 </u></h4>
+<img src="sprite/EmotionEffectList.png" width="600" alt="感情システム 各段階の効果一覧">
+<br>
+<h4 id="ボスhp閾値による特殊演出"><u> ボスHP閾値による特殊演出 </u></h4>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>演出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ボスHP50%以下 : バフ3段階へ強制移行</td>
+<td><img src="movie/BossHp50Per.gif" width="350" alt="HP50%以下の特殊演出"></td>
+</tr>
+<tr>
+<td>ボスHP25%以下 : デバフ3段階へ強制移行</td>
+<td><img src="movie/BossHp25Per.gif" width="350" alt="HP25%以下の特殊演出"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
 <h2 id="4-担当コード">4. 担当コード</h2>
 <h3 id="-プレイヤー">👤 プレイヤー</h3>
 <p><code>Player</code> <code>PlayerState</code> <code>PlayerController</code></p>
