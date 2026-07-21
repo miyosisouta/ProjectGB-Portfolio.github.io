@@ -75,69 +75,30 @@
 
 ## 3. ゲーム紹介
 
-### 🦍 ボス登場シーン
+### 🎮 コンセプト
+| 項目 | 内容 |
+|---|---|
+| **コンセプト** | スキルと回避を駆使して戦う、ワン vs ワンの3Dアクションゲーム |
+| **コアループ** | ボスの予兆モーションと攻撃予測線を見極め、回避と反撃を繰り返して戦う |
+| **差別化ポイント** | プレイヤーの行動によってボスの感情が変化し、ステータス等に影響する「**感情システム**」という独自システム |
 
-> アウトゲームにて挑戦するボスを選択できます。  
-> 選択したボスを倒すことがゲームの目標です。
-
-<img src="movie\BossAppearance.gif" width="560" alt="ボス1登場シーン">
+<br>
 
 ---
+### 🎬 ゲームシーン紹介
 
-### 🕹️ プレイヤーアクション
+> ゲーム紹介動画です。  
+> 戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。  
 
-<br>
-<u><span style="font-size: 20px;"><b>通常スキル</b></span></u>
-<br>
-
-| 噛みつき |
-|:---:|
-<img src="movie\PlayerNormalAttack.gif" width="370" alt="プレイヤーの通常攻撃"> |
-
-
-<br>
-<u><span style="font-size: 20px;"><b>特殊スキル</b></span></u>
-<br>
-
-| デフォルト攻撃 | 地雷 | 火魔法 |
-|:---:|:---:|:---:|
-<img src="movie\PlayerDefaultAttaack.gif" width="310" alt="プレイヤーの特殊攻撃"> | <img src="movie\PlayerLandMine.gif" width="310" alt="プレイヤーの地雷"> | <img src="movie\PlayerFireMagic.gif" width="310" alt="プレイヤーの火魔法"> |
+<iframe width="500" height="281"
+  src="https://www.youtube.com/embed/eB5mZ3MzSxA"
+  title="がぶっとバスターPV"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
 
 
-<br>
-<u><span style="font-size: 20px;"><b>汎用スキル</b></span></u>
-<br>
-
-> ダメージを受けるパターンと回避成功パターンの2種類を掲載しています。
-
-| 回避（ダメージあり） | 回避（成功） |
-|:---:|:---:|
-<img src="movie\PlayerAvoidFailure.gif" width="370" alt="回避失敗"> | <img src="movie\PlayerAvoidSuccess.gif" width="370" alt="回避成功"> |
-
-
-<br>
-
-### 👾 ボスの攻撃パターン
-
-| 通常攻撃 | 回転攻撃 | ヒットスタンプ |
-|:---:|:---:|:---:|
-<img src="movie\BossNormalAttack.gif" width="310" alt="ボスの通常攻撃"> | <img src="movie\BossSpinAttack.gif" width="310" alt="ボスの回転攻撃"> | <img src="movie\BossHitStamp.gif" width="310" alt="ボスのヒットスタンプ"> |
-
-#### レーザー攻撃
-
-| 通常 | 3連射 | チャージ |
-|:---:|:---:|:---:|
-<img src="movie\BossNormalLaser.gif" width="310" alt="レーザー通常"> | <img src="movie\BossMultLaser.gif" width="310" alt="レーザー3連射"> | <img src="movie\BossChargeLaser.gif" width="310" alt="レーザーチャージ"> |
-
----
-
-### ⚙️ 設定
-
-| 🔊 音量設定 | 🎮 キーコンフィグ | 📷 カメラ設定 |
-|:---:|:---:|:---:|
-<img src="movie\SoundSetting.gif" width="310" alt="音量設定"> | <img src="movie\KeyConfig.gif" width="310" alt="キー設定"> | <img src="sprite\UnderPreparation.png" width="310" alt="カメラ設定"> |
-
-<br>
 
 ## 4. 担当コード
 
