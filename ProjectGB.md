@@ -142,41 +142,66 @@
 
 ## 4. 担当コード
 
-### 👤 プレイヤー
-`Player` `PlayerState` `PlayerController`
+> 以下は自身が担当したコードファイルの一覧です。  
+> ファイルパスは `Game` フォルダからの相対パスで記載しています
+> 🤖のついたファイルはAIに生成してもらったコードです。
 
-### 👾 ボス
-`BossCharacter` `BossState` `BossSpawner` `NPCController`
+<span style="display:block;margin-bottom:3em;"></span> 
 
-### 🏗️ 基底・共通
-`Actor` `Character` `ActorStatus` `IState` `StateMachine` `CharacterDataBase` `AttackObject` `AttackObjectManager`
+### 👤 src/Actor
+`Actor` `ActorStatus` `AttackObject` `AttackObjectManager` `AttackRange` `BossCharacter` `BossSpawner` `BossState` `Character` `IState` `NPCController` `Player` `PlayerController` `PlayerState` `StateMachine`
 
-### 🎯 バトル
-`BattleManager` `Mission` `MissionCondition` `MissionEvent` `MissionManager` `MissionType`
+### 🎯 src/Battle
+`BattleManager` `BossEmotionPhaseManager` `Mission` `MissionCondition` `MissionEvent` `MissionManager` `MissionType.h`
 
-### ⚔️ スキル
-`ISkill` `NormalAttack` `AbilityBase` `DefaultAttack` `Utility` `Bomb` `Magic`
+### 🎥 src/Camera
+`🤖 CameraCommon` `🤖 CameraConfig` `🤖 CameraController` `🤖 CameraManager` `🤖 CameraSteering`
 
-### 💥 当たり判定
-`GhostBody` `GhostBodyManager` `GhostPrimitive` `BroadphaseInterface` `BroadphaseImpl` `CollisionHitManager` `BoundingVolume` `PhysicalBody`
+### 💥 src/Collision
+`🤖 BoundingVolume` `🤖 BroadphaseImpl` `🤖 BroadphaseInterface` `CollisionHitManager` `🤖 GhostBody`  
+`🤖 GhostBodyManager` `🤖 GhostPrimitive` `🤖 PhysicalBody` `🤖Types.h`
 
-### 🎥 カメラ
-`CameraCommon` `CameraController` `CameraManager` `CameraSteering`
-
-### 🏔️ ステージ
-`StageBase` `StageManager` `StaticObject`
-
-### 🌾 草システム
-`GrassBendManager` `GrassObject` `grass.fx` `RenderToBufferFor3DModel.fx` `DitherCBData`
-
-### 🧩 コアシステム
+### 🧩 src/Core
 `KeyConfig` `ParameterManager`
 
-### 🖥️ UI
-`UIManager`
+### ✨ src/Effect
+`EffectManager` `Types`
 
-### 🐛 デバッグ
-`DebugGrassScene`
+### 🎭 src/Emotion
+`EmotionEffectObserver` `EmotionSystem` `IBossStatusModifier.h` `IEmotionObserver.h`
+
+### 📐 src/Math
+`Transform`
+
+### 📦 src/Memory
+`🤖 Array`
+
+### 🎬 src/Scene
+`DebugGrassScene` `TitleBackground` `TitleScene`
+
+### ⚔️ src/Skill
+`NormalAttack` `AbilityBase` `Bomb` `DefaultAttack` `Magic` `Utility` `ISkill`
+
+### 🔊 src/Sound
+`SoundManager` `Types`
+
+### 🌾 src/Stage
+`🤖 GrassBendManager` `🤖 GrassObject` `StageBase` `StageManager` `StaticObject`
+
+### 🖥️ src/UI
+`BossPhaseCutSceneMenu` `GameClearMenu` `GameOverMenu` `InGameMenu` `MissionMenu`
+
+### 🔧 src/Util
+`DamageCalculator.h` `GameTimer`
+
+### 🏗️ src
+`CharacterDataBase` `Types`
+
+### 🖌️ Assets/shader
+`🤖 attackRange` `🤖 attackRangeBox` `🤖 attackRangeLine` `🤖 AttackRangeLine9Slice` `🤖 ground_splat`
+
+### 🖌️ Assets/shader/preProcess
+`🤖 RenderToGBufferFor3DModel`
 
 <br>
 

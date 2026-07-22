@@ -614,30 +614,49 @@ code {
 <br>
 <br>
 <h2 id="4-担当コード">4. 担当コード</h2>
-<h3 id="-プレイヤー">👤 プレイヤー</h3>
-<p><code>Player</code> <code>PlayerState</code> <code>PlayerController</code></p>
-<h3 id="-ボス">👾 ボス</h3>
-<p><code>BossCharacter</code> <code>BossState</code> <code>BossSpawner</code> <code>NPCController</code></p>
-<h3 id="️-基底共通">🏗️ 基底・共通</h3>
-<p><code>Actor</code> <code>Character</code> <code>ActorStatus</code> <code>IState</code> <code>StateMachine</code> <code>CharacterDataBase</code> <code>AttackObject</code> <code>AttackObjectManager</code></p>
-<h3 id="-バトル">🎯 バトル</h3>
-<p><code>BattleManager</code> <code>Mission</code> <code>MissionCondition</code> <code>MissionEvent</code> <code>MissionManager</code> <code>MissionType</code></p>
-<h3 id="️-スキル">⚔️ スキル</h3>
-<p><code>ISkill</code> <code>NormalAttack</code> <code>AbilityBase</code> <code>DefaultAttack</code> <code>Utility</code> <code>Bomb</code> <code>Magic</code></p>
-<h3 id="-当たり判定">💥 当たり判定</h3>
-<p><code>GhostBody</code> <code>GhostBodyManager</code> <code>GhostPrimitive</code> <code>BroadphaseInterface</code> <code>BroadphaseImpl</code> <code>CollisionHitManager</code> <code>BoundingVolume</code> <code>PhysicalBody</code></p>
-<h3 id="-カメラ">🎥 カメラ</h3>
-<p><code>CameraCommon</code> <code>CameraController</code> <code>CameraManager</code> <code>CameraSteering</code></p>
-<h3 id="️-ステージ">🏔️ ステージ</h3>
-<p><code>StageBase</code> <code>StageManager</code> <code>StaticObject</code></p>
-<h3 id="-草システム">🌾 草システム</h3>
-<p><code>GrassBendManager</code> <code>GrassObject</code> <code>grass.fx</code> <code>RenderToBufferFor3DModel.fx</code> <code>DitherCBData</code></p>
-<h3 id="-コアシステム">🧩 コアシステム</h3>
+<blockquote>
+<p>以下は自身が担当したコードファイルの一覧です。<br>
+ファイルパスは <code>Game</code> フォルダからの相対パスで記載しています
+🤖のついたファイルはAIに生成してもらったコードです。</p>
+</blockquote>
+<p><span style="display:block;margin-bottom:3em;"></span></p>
+<h3 id="-srcactor">👤 src/Actor</h3>
+<p><code>Actor</code> <code>ActorStatus</code> <code>AttackObject</code> <code>AttackObjectManager</code> <code>AttackRange</code> <code>BossCharacter</code> <code>BossSpawner</code> <code>BossState</code> <code>Character</code> <code>IState</code> <code>NPCController</code> <code>Player</code> <code>PlayerController</code> <code>PlayerState</code> <code>StateMachine</code></p>
+<h3 id="-srcbattle">🎯 src/Battle</h3>
+<p><code>BattleManager</code> <code>BossEmotionPhaseManager</code> <code>Mission</code> <code>MissionCondition</code> <code>MissionEvent</code> <code>MissionManager</code> <code>MissionType.h</code></p>
+<h3 id="-srccamera">🎥 src/Camera</h3>
+<p><code>🤖 CameraCommon</code> <code>🤖 CameraConfig</code> <code>🤖 CameraController</code> <code>🤖 CameraManager</code> <code>🤖 CameraSteering</code></p>
+<h3 id="-srccollision">💥 src/Collision</h3>
+<p><code>🤖 BoundingVolume</code> <code>🤖 BroadphaseImpl</code> <code>🤖 BroadphaseInterface</code> <code>CollisionHitManager</code> <code>🤖 GhostBody</code><br>
+<code>🤖 GhostBodyManager</code> <code>🤖 GhostPrimitive</code> <code>🤖 PhysicalBody</code> <code>🤖Types.h</code></p>
+<h3 id="-srccore">🧩 src/Core</h3>
 <p><code>KeyConfig</code> <code>ParameterManager</code></p>
-<h3 id="️-ui">🖥️ UI</h3>
-<p><code>UIManager</code></p>
-<h3 id="-デバッグ">🐛 デバッグ</h3>
-<p><code>DebugGrassScene</code></p>
+<h3 id="-srceffect">✨ src/Effect</h3>
+<p><code>EffectManager</code> <code>Types</code></p>
+<h3 id="-srcemotion">🎭 src/Emotion</h3>
+<p><code>EmotionEffectObserver</code> <code>EmotionSystem</code> <code>IBossStatusModifier.h</code> <code>IEmotionObserver.h</code></p>
+<h3 id="-srcmath">📐 src/Math</h3>
+<p><code>Transform</code></p>
+<h3 id="-srcmemory">📦 src/Memory</h3>
+<p><code>🤖 Array</code></p>
+<h3 id="-srcscene">🎬 src/Scene</h3>
+<p><code>DebugGrassScene</code> <code>TitleBackground</code> <code>TitleScene</code></p>
+<h3 id="️-srcskill">⚔️ src/Skill</h3>
+<p><code>NormalAttack</code> <code>AbilityBase</code> <code>Bomb</code> <code>DefaultAttack</code> <code>Magic</code> <code>Utility</code> <code>ISkill</code></p>
+<h3 id="-srcsound">🔊 src/Sound</h3>
+<p><code>SoundManager</code> <code>Types</code></p>
+<h3 id="-srcstage">🌾 src/Stage</h3>
+<p><code>🤖 GrassBendManager</code> <code>🤖 GrassObject</code> <code>StageBase</code> <code>StageManager</code> <code>StaticObject</code></p>
+<h3 id="️-srcui">🖥️ src/UI</h3>
+<p><code>BossPhaseCutSceneMenu</code> <code>GameClearMenu</code> <code>GameOverMenu</code> <code>InGameMenu</code> <code>MissionMenu</code></p>
+<h3 id="-srcutil">🔧 src/Util</h3>
+<p><code>DamageCalculator.h</code> <code>GameTimer</code></p>
+<h3 id="️-src">🏗️ src</h3>
+<p><code>CharacterDataBase</code> <code>Types</code></p>
+<h3 id="️-assetsshader">🖌️ Assets/shader</h3>
+<p><code>🤖 attackRange</code> <code>🤖 attackRangeBox</code> <code>🤖 attackRangeLine</code> <code>🤖 AttackRangeLine9Slice</code> <code>🤖 ground_splat</code></p>
+<h3 id="️-assetsshaderpreprocess">🖌️ Assets/shader/preProcess</h3>
+<p><code>🤖 RenderToGBufferFor3DModel</code></p>
 <br>
 <h2 id="5-技術紹介">5. 技術紹介</h2>
 <h3 id="-1-草システム">🌾 1. 草システム</h3>
