@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
 <img src="sprite\mainKeyVisual_logo.png" width="750" alt="タイトル画像">
 
 ---
@@ -91,6 +91,8 @@
 
 > ゲーム紹介動画です。  
 > 戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。  
+> **動画のURL : https://youtu.be/eB5mZ3MzSxA**
+
 
 <iframe width="500" height="281"
   src="https://www.youtube.com/embed/eB5mZ3MzSxA"
@@ -104,6 +106,13 @@
 
 ---
 ### 🎭 感情システム
+
+>- 実際に他の方にプレイしていただいた際、**「ただ殴るだけのゲームじゃん」「ただの作業」** という感想をいただいたことがあり、それをきっかけに実装したシステムです。  
+>- プレイヤーが操作する犬とボスは **「人形」** がコンセプトになっており、特別な力を得たことで**感情**を持つようになった、という設定にしています。  
+>- この感情をもとに、ボスにバフ・デバフを与える仕組みにしました。  
+
+<br>
+
 
 #### <u> バフ・デバフの発生条件 </u>
 
@@ -125,8 +134,8 @@
 
 | 条件 | 演出 |
 |---|---|
-| ボスHP50%以下 : バフ3段階へ強制移行 | <img src="movie/【ファイル名】.gif" width="350" alt="HP50%以下の特殊演出"> |
-| ボスHP25%以下 : デバフ3段階へ強制移行 | <img src="movie/【ファイル名】.gif" width="350" alt="HP25%以下の特殊演出"> |
+| ボスHP50%以下 : バフ3段階へ強制移行 | <img src="movie/BossHp50Per.gif" width="350" alt="HP50%以下の特殊演出"> |
+| ボスHP25%以下 : デバフ3段階へ強制移行 | <img src="movie/BossHp25Per.gif" width="350" alt="HP25%以下の特殊演出"> |
 
 <br>
 <br>
@@ -177,7 +186,7 @@
 ### 🌾 1. 草システム
 
 <br>
-<u><span style="font-size: 18px;"><b>頂点シェーダーによるプロシージャルアニメーション</b></span></u>  
+<u><span style="font-size: 18px;"><b>頂点シェーダーによる草アニメーション</b></span></u>  
 <br>
 
 <span style="display:block;margin-bottom:0.5em;"></span> 
@@ -185,7 +194,9 @@
 > - 地面が平らで何もないのが見た目的に寂しかったため、草を配置して自然なフィールドにしたいと思い実装しました。  
 > - 時間経過で自然にもとに戻るようにしています。
 
-<img src="movie\GrassBend.gif" width="350" alt="草が曲がる">  
+| アニメーションなし | アニメーションあり |
+|:---:|:---:|
+| <img src="movie/GrassAnimation_No.gif" width="350" alt="草アニメーションなし"> | <img src="movie/GrassAnimation_Yes.gif" width="350" alt="草アニメーションあり"> |
 
 
 <br>
@@ -229,7 +240,7 @@
 
 | 単発攻撃（AddSource） | スピン攻撃（SetSource） |
 |:---:|:---:|
-| <img src="movie\Grass_Single_Bend.gif" width="350" alt="単発攻撃の草曲げ"> | <img src="movie\Grass_Spin_Bend.gif" width="350" alt="スピン攻撃の草曲げ"> |
+| <img src="movie\Grass_HitStamp_Bend.gif" width="350" alt="ヒットスタンプ攻撃の草曲げ"> | <img src="movie\Grass_Spin_Bend.gif" width="350" alt="スピン攻撃の草曲げ"> |
 
 > - スピン攻撃用に固定スロット `SPIN_ATTACK_SLOT` を設けて他の攻撃と干渉しないようにしました
 > - LOD0・LOD1のみ草曲げシェーダーを適用し、遠景のLOD2はデフォルトシェーダーで軽量化しました

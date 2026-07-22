@@ -365,7 +365,7 @@ code {
           : 'default'
     });
   </script>
-<link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="style.css">
 <img src="sprite\mainKeyVisual_logo.png" width="750" alt="タイトル画像">
 <hr>
 <br>
@@ -545,7 +545,8 @@ code {
 <h3 id="-pv">🎬 PV</h3>
 <blockquote>
 <p>ゲーム紹介動画です。<br>
-戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。</p>
+戦闘の様子、プレイヤーのスキルやボスの攻撃、バフ・デバフの変化などをまとめて紹介しています。<br>
+<strong>動画のURL : https://youtu.be/eB5mZ3MzSxA</strong></p>
 </blockquote>
 <iframe width="500" height="281"
   src="https://www.youtube.com/embed/eB5mZ3MzSxA"
@@ -557,6 +558,14 @@ code {
 <br>
 <hr>
 <h3 id="-感情システム">🎭 感情システム</h3>
+<blockquote>
+<ul>
+<li>実際に他の方にプレイしていただいた際、<strong>「ただ殴るだけのゲームじゃん」「ただの作業」</strong> という感想をいただいたことがあり、それをきっかけに実装したシステムです。</li>
+<li>プレイヤーが操作する犬とボスは <strong>「人形」</strong> がコンセプトになっており、特別な力を得たことで<strong>感情</strong>を持つようになった、という設定にしています。</li>
+<li>この感情をもとに、ボスにバフ・デバフを与える仕組みにしました。</li>
+</ul>
+</blockquote>
+<br>
 <h4 id="バフデバフの発生条件"><u> バフ・デバフの発生条件 </u></h4>
 <table>
 <thead>
@@ -633,7 +642,7 @@ code {
 <h2 id="5-技術紹介">5. 技術紹介</h2>
 <h3 id="-1-草システム">🌾 1. 草システム</h3>
 <br>
-<u><span style="font-size: 18px;"><b>頂点シェーダーによるプロシージャルアニメーション</b></span></u>  
+<u><span style="font-size: 18px;"><b>頂点シェーダーによる草アニメーション</b></span></u>  
 <br>
 <p><span style="display:block;margin-bottom:0.5em;"></span></p>
 <blockquote>
@@ -642,7 +651,20 @@ code {
 <li>時間経過で自然にもとに戻るようにしています。</li>
 </ul>
 </blockquote>
-<img src="movie\GrassBend.gif" width="350" alt="草が曲がる">  
+<table>
+<thead>
+<tr>
+<th style="text-align:center">アニメーションなし</th>
+<th style="text-align:center">アニメーションあり</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="movie/GrassAnimation_No.gif" width="350" alt="草アニメーションなし"></td>
+<td style="text-align:center"><img src="movie/GrassAnimation_Yes.gif" width="350" alt="草アニメーションあり"></td>
+</tr>
+</tbody>
+</table>
 <br>
 <u><span style="font-size: 20px;"><b>なぜ頂点シェーダーか</b></span></u>
 <br>
@@ -717,7 +739,7 @@ code {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="movie\Grass_Single_Bend.gif" width="350" alt="単発攻撃の草曲げ"></td>
+<td style="text-align:center"><img src="movie\Grass_HitStamp_Bend.gif" width="350" alt="ヒットスタンプ攻撃の草曲げ"></td>
 <td style="text-align:center"><img src="movie\Grass_Spin_Bend.gif" width="350" alt="スピン攻撃の草曲げ"></td>
 </tr>
 </tbody>
